@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import MainMenuItem from 'starterComps/MainMenuItem';
+import MainMenuItem from 'starterComponents/MainMenuItem';
 
 const MainMenu = props => {
   const { items } = props;

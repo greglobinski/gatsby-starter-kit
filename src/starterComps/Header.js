@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Branding from 'starterComps/Branding';
-import MainMenu from 'starterComps/MainMenu';
+import Branding from 'starterComponents/Branding';
+import MainMenu from 'starterComponents/MainMenu';
 
 import config from 'content/meta/config';
 import menu from 'content/meta/menu';

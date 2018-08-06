@@ -1,9 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from 'starterComps/Layout';
-import Article from 'starterComps/Article';
-import Bodytext from 'starterComps/Bodytext';
+import Layout from 'starterComponents/Layout';
+import Article from 'starterComponents/Article';
+import Bodytext from 'starterComponents/Bodytext';
 
 const IndexPage = props => {
   const {

@@ -2,8 +2,8 @@ import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Header from 'starterComps/Header';
-import Footer from 'starterComps/Footer';
+import Header from 'starterComponents/Header';
+import Footer from 'starterComponents/Footer';
 
 const Layout = props => {
   const { children } = props;
