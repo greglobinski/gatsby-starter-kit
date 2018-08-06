@@ -12,7 +12,7 @@ import {
   layout,
   article,
   bodytext,
-  heading
+  heading,
 } from 'gatsby-starter-kit-themes/dist/default';
 
 import { themed } from 'gatsby-starter-kit-themes/dist/';
@@ -28,7 +28,6 @@ const HeadingThemed = themed({ themeStyle: heading })(Heading);
 const IndexPage = props => {
   const {
     data: {
-      welcome: { html: welcomeHTML },
       footerLinks: { html: footerLinksHTML },
       copyrightNote: { html: copyrightNoteHTML },
       welcome: {
@@ -50,7 +49,7 @@ const IndexPage = props => {
     >
       <ArticleThemed>
         <HeadingThemed title={welcomeTitle} />
-        <BodytextThemed html={welcomeTitle} />
+        <BodytextThemed html={welcomeHTML} />
       </ArticleThemed>
       <Seo config={config} />
     </LayoutThemed>
