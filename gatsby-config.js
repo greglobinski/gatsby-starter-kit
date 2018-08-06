@@ -24,5 +24,6 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
+    `gatsby-plugin-emotion`,
   ],
 };
