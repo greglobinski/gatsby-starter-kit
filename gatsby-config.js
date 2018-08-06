@@ -4,7 +4,6 @@ const config = require('./src/content/meta/config');
 module.exports = {
   siteMetadata: {
     title: config.siteTitle,
-    description: config.siteDescription,
     siteUrl: config.siteUrl,
   },
   plugins: [
