@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import Layout from 'starterComponents/Layout';
 import Article from 'starterComponents/Article';
 import Bodytext from 'starterComponents/Bodytext';
+import Seo from 'starterComponents/Seo';
 
 const IndexPage = props => {
   const {
@@ -17,6 +18,7 @@ const IndexPage = props => {
       <Article>
         <Bodytext html={welcomeHTML} />
       </Article>
+      <Seo />
     </Layout>
   );
 };

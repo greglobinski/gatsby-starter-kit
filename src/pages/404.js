@@ -5,6 +5,7 @@ import Layout from 'starterComponents/Layout';
 import Article from 'starterComponents/Article';
 import Heading from 'starterComponents/Heading';
 import Bodytext from 'starterComponents/Bodytext';
+import Seo from 'starterComponents/Seo';
 
 const NotFoundPage = props => {
   const {
@@ -19,6 +20,7 @@ const NotFoundPage = props => {
         <Heading title="NOT FOUND" />
         <Bodytext html={notFoundHTML} />
       </Article>
+      <Seo />
     </Layout>
   );
 };
