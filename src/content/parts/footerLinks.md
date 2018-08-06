@@ -2,6 +2,6 @@
 name: footerLinks
 ---
 
-- it's a demo site of [gatsby-starter-kit](https://github.com/greglobinski/gatsby-starter-kit)
-- built by [greg lobinski](https://www.greglobinski.com)
-- learn [Front-end web development with Greg](https://dev.greglobinski.com)
+- Github repo: [gatsby-starter-kit](https://github.com/greglobinski/gatsby-starter-kit)
+- Built by [greg lobinski](https://www.greglobinski.com)
+- Read about [Front-end web development](https://dev.greglobinski.com)
