@@ -4,18 +4,23 @@ import { graphql } from 'gatsby';
 import Layout from 'starterComponents/Layout';
 import Article from 'starterComponents/Article';
 import Bodytext from 'starterComponents/Bodytext';
+import Heading from 'starterComponents/Heading';
 import Seo from 'starterComponents/Seo';
 
 const IndexPage = props => {
   const {
     data: {
-      welcome: { html: welcomeHTML },
+      welcome: {
+        html: welcomeHTML,
+        frontmatter: { title: welcomeTitle },
+      },
     },
   } = props;
 
   return (
     <Layout>
       <Article>
+        <Heading title={welcomeTitle} />
         <Bodytext html={welcomeHTML} />
       </Article>
       <Seo />
@@ -31,6 +36,9 @@ export const query = graphql`
       fileAbsolutePath: { regex: "/content/parts/welcome/" }
     ) {
       html
+      frontmatter {
+        title
+      }
     }
   }
 `;
