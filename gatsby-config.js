@@ -1,3 +1,4 @@
+require('dotenv').config();
 const config = require('./src/content/meta/config');
 
 module.exports = {
@@ -16,5 +17,12 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-catch-links`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_ID,
+      },
+    },
   ],
 };

@@ -7,10 +7,12 @@ import {
   Layout,
   Article,
   Bodytext,
+  Heading,
   Seo,
   layout,
   article,
   bodytext,
+  heading
 } from 'gatsby-starter-kit-themes/dist/default';
 
 import { themed } from 'gatsby-starter-kit-themes/dist/';
@@ -21,6 +23,7 @@ import menu from 'content/meta/menu';
 const LayoutThemed = themed({ themeStyle: layout })(Layout);
 const ArticleThemed = themed({ themeStyle: article })(Article);
 const BodytextThemed = themed({ themeStyle: bodytext })(Bodytext);
+const HeadingThemed = themed({ themeStyle: heading })(Heading);
 
 const IndexPage = props => {
   const {
@@ -28,6 +31,10 @@ const IndexPage = props => {
       welcome: { html: welcomeHTML },
       footerLinks: { html: footerLinksHTML },
       copyrightNote: { html: copyrightNoteHTML },
+      welcome: {
+        html: welcomeHTML,
+        frontmatter: { title: welcomeTitle },
+      },
     },
   } = props;
 
@@ -42,7 +49,8 @@ const IndexPage = props => {
       menu={menu}
     >
       <ArticleThemed>
-        <BodytextThemed html={welcomeHTML} />
+        <HeadingThemed title={welcomeTitle} />
+        <BodytextThemed html={welcomeTitle} />
       </ArticleThemed>
       <Seo config={config} />
     </LayoutThemed>
@@ -57,6 +65,9 @@ export const query = graphql`
       fileAbsolutePath: { regex: "/content/parts/welcome/" }
     ) {
       html
+      frontmatter {
+        title
+      }
     }
     footerLinks: markdownRemark(
       fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
