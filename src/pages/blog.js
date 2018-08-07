@@ -1,8 +1,5 @@
-import { graphql } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
-
-import 'prismjs/themes/prism-okaidia.css';
+import { graphql, Link } from 'gatsby';
 
 import {
   // eslint-disable-next-line no-unused-vars
@@ -13,8 +10,7 @@ import {
   Branding,
   Menu,
   Article,
-  Heading,
-  Bodytext,
+  Blog,
   Seo,
   layout,
   footer,
@@ -22,30 +18,24 @@ import {
   branding,
   menu,
   article,
-  heading,
-  bodytext,
+  blog,
 } from 'gatsby-starter-kit-themes/dist/default';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
 
-const PostTemplate = props => {
+const BlogPage = props => {
   const {
     data: {
-      post,
-      post: {
-        html: postHTML,
-        frontmatter: { title },
-        fields: { slug },
-      },
-      author: { html: authorHTML },
+      posts: { edges },
       footerLinks: { html: footerLinksHTML },
       copyright: { html: copyrightHTML },
     },
-    pageContext: { next, prev },
   } = props;
 
-  const { headerTitle, headerSubTitle, siteUrl } = config;
+  const posts = edges.map(edge => edge.node);
+
+  const { headerTitle, headerSubTitle } = config;
 
   return (
     <Layout themeStyle={layout} menu={menu}>
@@ -58,8 +48,7 @@ const PostTemplate = props => {
         <Menu themeStyle={menu} items={menuItems} />
       </Header>
       <Article themeStyle={article}>
-        <Heading themeStyle={heading} title={title} />
-        <Bodytext themeStyle={bodytext} html={postHTML} />
+        <Blog themeStyle={blog} items={posts} author={'greg'} />
       </Article>
       <Footer
         themeStyle={footer}
@@ -71,31 +60,28 @@ const PostTemplate = props => {
   );
 };
 
-PostTemplate.propTypes = {
-  data: PropTypes.object.isRequired,
-  pageContext: PropTypes.object.isRequired,
-};
-
-export default PostTemplate;
+export default BlogPage;
 
 export const query = graphql`
-  query PostTemplateQuery($slug: String!) {
-    post: markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      fileAbsolutePath
-      fields {
-        slug
-        prefix
-      }
-      frontmatter {
-        title
-        categories
-      }
-    }
-    author: markdownRemark(
-      fileAbsolutePath: { regex: "/content/parts/author/" }
+  query {
+    posts: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "//posts/[0-9]+.*--/" } }
+      sort: { fields: [fields___prefix], order: DESC }
     ) {
-      html
+      edges {
+        node {
+          excerpt(pruneLength: 250)
+          fields {
+            slug
+            prefix
+            identifier
+          }
+          frontmatter {
+            title
+            categories
+          }
+        }
+      }
     }
     footerLinks: markdownRemark(
       fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
