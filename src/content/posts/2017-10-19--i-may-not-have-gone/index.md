@@ -1,7 +1,7 @@
 ---
 title: I may not have gone where I intended to go
 subTitle: But I think I have ended up where I needed to be
-category: "testimonies"
+categories: ["testimonies"]
 cover: photo-1507915600431-5292809c5ab7.jpg
 ---
 
