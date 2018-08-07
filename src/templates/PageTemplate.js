@@ -4,44 +4,68 @@ import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
 
+import {
+  // eslint-disable-next-line no-unused-vars
+  global,
+  Layout,
+  Footer,
+  Header,
+  Branding,
+  Menu,
+  Article,
+  Heading,
+  Bodytext,
+  Seo,
+  layout,
+  footer,
+  header,
+  branding,
+  menu,
+  article,
+  heading,
+  bodytext,
+} from 'gatsby-starter-kit-themes/dist/default';
+
 import config from 'content/meta/config';
-
-import Layout from 'base/Layout';
-import Page from 'base/Page';
-import List from 'base/List';
-import Seo from 'base/Seo';
-
-import themed from 'utils/themed';
-
-const PageThemed = themed({ theme: config.theme, style: 'page' })(Page);
+import menuItems from 'content/meta/menu';
 
 const PageTemplate = props => {
   const {
     data: {
       page,
       page: {
-        frontmatter: { title, categories },
+        html: pageHTML,
+        frontmatter: { title },
         fields: { slug },
       },
-      pages: { edges: rawItems },
+      footerLinks: { html: footerLinksHTML },
+      copyrightNote: { html: copyrightNoteHTML },
     },
   } = props;
 
-  const items = rawItems.map(item => item.node);
-
-  const layoutStyle =
-    categories && categories.includes('docs') ? 'layoutSidebar' : 'layout';
-
-  const LayoutThemed = themed({
-    theme: config.theme,
-    style: layoutStyle,
-  })(Layout);
+  const { headerTitle, headerSubTitle } = config;
 
   return (
-    <LayoutThemed>
-      <PageThemed page={page} />
-      <Seo title={title} path={slug} />
-    </LayoutThemed>
+    <Layout themeStyle={layout} menu={menu}>
+      <Header themeStyle={header} menu={menu}>
+        <Branding
+          themeStyle={branding}
+          title={headerTitle}
+          subTitle={headerSubTitle}
+        />
+        <Menu themeStyle={menu} items={menuItems} />
+      </Header>
+      <Article themeStyle={article}>
+        <Heading themeStyle={heading} title={title} />
+        <Bodytext themeStyle={bodytext} html={pageHTML} />
+      </Article>
+      <Footer
+        themeStyle={footer}
+        links={footerLinksHTML}
+        copyright={copyrightNoteHTML}
+      />
+      <Seo config={config} />
+    </Layout>
   );
 };
 
@@ -66,21 +90,15 @@ export const query = graphql`
         categories
       }
     }
-    pages: allMarkdownRemark(
-      filter: { frontmatter: { categories: { in: ["docs"] } } }
-      sort: { fields: [fields___prefix] }
+    footerLinks: markdownRemark(
+      fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
     ) {
-      edges {
-        node {
-          fields {
-            slug
-            prefix
-          }
-          frontmatter {
-            title
-          }
-        }
-      }
+      html
+    }
+    copyrightNote: markdownRemark(
+      fileAbsolutePath: { regex: "/content/parts/copyrightNote/" }
+    ) {
+      html
     }
   }
 `;
