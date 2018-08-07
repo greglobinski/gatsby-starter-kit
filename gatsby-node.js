@@ -37,13 +37,17 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
+    const postTemplate = path.resolve('./src/templates/PostTemplate.js');
     const pageTemplate = path.resolve('./src/templates/PageTemplate.js');
+    const categoryTemplate = path.resolve(
+      './src/templates/CategoryTemplate.js'
+    );
 
     resolve(
       graphql(`
         {
           allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "//pages//" } }
+            filter: { fileAbsolutePath: { regex: "//posts|pages//" } }
             sort: { fields: [fields___prefix], order: DESC }
             limit: 1000
           ) {
@@ -86,6 +90,41 @@ exports.createPages = ({ graphql, actions }) => {
               categorySet.add(category);
             });
           }
+        });
+
+        // Create category pages
+        const categoryList = Array.from(categorySet);
+        categoryList.forEach(category => {
+          createPage({
+            path: `/category/${_.kebabCase(category)}/`,
+            component: categoryTemplate,
+            context: {
+              category,
+            },
+          });
+        });
+
+        // Create posts
+        const posts = items.filter(item =>
+          /posts/.test(item.node.fileAbsolutePath)
+        );
+        posts.forEach(({ node }, index) => {
+          const slug = node.fields.slug;
+          const identifier = node.fields.identifier;
+          const next = index === 0 ? undefined : posts[index - 1].node;
+          const prev =
+            index === posts.length - 1 ? undefined : posts[index + 1].node;
+
+          createPage({
+            path: slug,
+            component: postTemplate,
+            context: {
+              slug,
+              identifier,
+              prev,
+              next,
+            },
+          });
         });
 
         // create pages
