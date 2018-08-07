@@ -83,7 +83,7 @@ PageTemplate.propTypes = {
 export default PageTemplate;
 
 export const query = graphql`
-  query CategoryTemplateQuery($slug: String!) {
+  query CategoryTemplateQuery($category: String!) {
     posts: allMarkdownRemark(
       limit: 1000
       sort: { fields: [fields___prefix], order: DESC }
