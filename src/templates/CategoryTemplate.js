@@ -36,7 +36,7 @@ const PageTemplate = props => {
     data: {
       posts: { totalCount, edges },
       footerLinks: { html: footerLinksHTML },
-      copyrightNote: { html: copyrightNoteHTML },
+      copyright: { html: copyrightHTML },
     },
   } = props;
 
@@ -68,7 +68,7 @@ const PageTemplate = props => {
       <Footer
         themeStyle={footer}
         links={footerLinksHTML}
-        copyright={copyrightNoteHTML}
+        copyright={copyrightHTML}
       />
       <Seo config={config} />
     </Layout>
@@ -87,7 +87,7 @@ export const query = graphql`
     posts: allMarkdownRemark(
       limit: 1000
       sort: { fields: [fields___prefix], order: DESC }
-      filter: { frontmatter: { categories: { in: [$category] } } }
+      filter: { frontmatter: { category: { eq: $category } } }
     ) {
       totalCount
       edges {
@@ -109,8 +109,8 @@ export const query = graphql`
     ) {
       html
     }
-    copyrightNote: markdownRemark(
-      fileAbsolutePath: { regex: "/content/parts/copyrightNote/" }
+    copyright: markdownRemark(
+      fileAbsolutePath: { regex: "/content/parts/copyright/" }
     ) {
       html
     }
