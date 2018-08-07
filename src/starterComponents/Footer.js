@@ -11,8 +11,8 @@ const Footer = props => {
           ) {
             html
           }
-          copyrightNote: markdownRemark(
-            fileAbsolutePath: { regex: "/parts/copyrightNote/" }
+          copyright: markdownRemark(
+            fileAbsolutePath: { regex: "/parts/copyright/" }
           ) {
             html
           }
@@ -21,18 +21,18 @@ const Footer = props => {
       render={data => {
         const {
           footerLinks: { html: footerLinksHTML },
-          copyrightNote: { html: ccopyrightNotetHTML },
+          copyright: { html: copyrightHTML },
         } = data;
 
         return (
           <footer className="footer">
             <div
-              className="footerLinks"
+              className="links"
               dangerouslySetInnerHTML={{ __html: footerLinksHTML }}
             />
             <div
-              className="copyrightNote"
-              dangerouslySetInnerHTML={{ __html: ccopyrightNotetHTML }}
+              className="copyright"
+              dangerouslySetInnerHTML={{ __html: copyrightHTML }}
             />
           </footer>
         );
