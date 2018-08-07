@@ -1,7 +1,7 @@
 ---
 title: I like nonsense, it wakes up the brain cells
 subTitle: Fantasy is a necessary ingredient in living
-category: "testimonies"
+categories: ["testimonies"]
 cover: photo-1465070845512-2b2dbdc6df66.jpg
 ---
 
