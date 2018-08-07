@@ -16,6 +16,10 @@ import {
   Heading,
   Bodytext,
   Meta,
+  NextPrev,
+  Share,
+  Author,
+  Comments,
   Seo,
   layout,
   footer,
@@ -26,6 +30,10 @@ import {
   heading,
   bodytext,
   meta,
+  nextPrev,
+  share,
+  author,
+  comments,
 } from 'gatsby-starter-kit-themes/dist/default';
 
 import config from 'content/meta/config';
@@ -34,8 +42,8 @@ import menuItems from 'content/meta/menu';
 const PostTemplate = props => {
   const {
     data: {
-      post,
       post: {
+        excerpt,
         html: postHTML,
         frontmatter: { title, categories },
         fields: { slug, prefix },
@@ -68,6 +76,16 @@ const PostTemplate = props => {
           categories={categories}
         />
         <Bodytext themeStyle={bodytext} html={postHTML} />
+        <Share
+          themeStyle={share}
+          slut={slug}
+          title={title}
+          excerpt={excerpt}
+          siteUrl={siteUrl}
+        />
+        <NextPrev themeStyle={nextPrev} next={next} prev={prev} />
+        <Author themeStyle={author} html={authorHTML} />
+        <Comments slug={slug} siteUrl={siteUrl} themeStyle={comments} />
       </Article>
       <Footer
         themeStyle={footer}
@@ -82,6 +100,8 @@ const PostTemplate = props => {
 PostTemplate.propTypes = {
   data: PropTypes.object.isRequired,
   pageContext: PropTypes.object.isRequired,
+  next: PropTypes.object,
+  prev: PropTypes.object,
 };
 
 export default PostTemplate;
@@ -91,6 +111,7 @@ export const query = graphql`
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       fileAbsolutePath
+      excerpt
       fields {
         slug
         prefix
