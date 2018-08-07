@@ -15,6 +15,7 @@ import {
   Article,
   Heading,
   Bodytext,
+  Meta,
   Seo,
   layout,
   footer,
@@ -24,6 +25,7 @@ import {
   article,
   heading,
   bodytext,
+  meta,
 } from 'gatsby-starter-kit-themes/dist/default';
 
 import config from 'content/meta/config';
@@ -35,8 +37,8 @@ const PostTemplate = props => {
       post,
       post: {
         html: postHTML,
-        frontmatter: { title },
-        fields: { slug },
+        frontmatter: { title, categories },
+        fields: { slug, prefix },
       },
       author: { html: authorHTML },
       footerLinks: { html: footerLinksHTML },
@@ -59,6 +61,12 @@ const PostTemplate = props => {
       </Header>
       <Article themeStyle={article}>
         <Heading themeStyle={heading} title={title} />
+        <Meta
+          themeStyle={meta}
+          author="greg"
+          prefix={prefix}
+          categories={categories}
+        />
         <Bodytext themeStyle={bodytext} html={postHTML} />
       </Article>
       <Footer
