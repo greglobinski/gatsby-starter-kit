@@ -11,8 +11,8 @@ const Footer = props => {
           ) {
             html
           }
-          copyrightNote: markdownRemark(
-            fileAbsolutePath: { regex: "/parts/copyrightNote/" }
+          copyright: markdownRemark(
+            fileAbsolutePath: { regex: "/parts/copyright/" }
           ) {
             html
           }
