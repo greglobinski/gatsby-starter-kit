@@ -40,7 +40,7 @@ const PostTemplate = props => {
       },
       author: { html: authorHTML },
       footerLinks: { html: footerLinksHTML },
-      copyrightNote: { html: copyrightNoteHTML },
+      copyright: { html: copyrightHTML },
     },
     pageContext: { next, prev },
   } = props;
@@ -64,7 +64,7 @@ const PostTemplate = props => {
       <Footer
         themeStyle={footer}
         links={footerLinksHTML}
-        copyright={copyrightNoteHTML}
+        copyright={copyrightHTML}
       />
       <Seo config={config} />
     </Layout>
@@ -102,8 +102,8 @@ export const query = graphql`
     ) {
       html
     }
-    copyrightNote: markdownRemark(
-      fileAbsolutePath: { regex: "/content/parts/copyrightNote/" }
+    copyright: markdownRemark(
+      fileAbsolutePath: { regex: "/content/parts/copyright/" }
     ) {
       html
     }
