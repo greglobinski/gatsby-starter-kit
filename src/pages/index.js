@@ -28,10 +28,6 @@ const IndexPage = props => {
       footerLinks: { html: footerLinksHTML },
       hero: { html: heroHTML },
       copyright: { html: copyrightHTML },
-      welcome: {
-        html: welcomeHTML,
-        frontmatter: { title: welcomeTitle },
-      },
     },
   } = props;
 
