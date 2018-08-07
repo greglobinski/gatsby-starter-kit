@@ -5,25 +5,26 @@ import {
   // eslint-disable-next-line no-unused-vars
   global,
   Layout,
+  Footer,
+  Header,
+  Branding,
+  Menu,
   Article,
-  Bodytext,
   Heading,
+  Bodytext,
   Seo,
   layout,
+  footer,
+  header,
+  branding,
+  menu,
   article,
-  bodytext,
   heading,
+  bodytext,
 } from 'gatsby-starter-kit-themes/dist/default';
 
-import { themed } from 'gatsby-starter-kit-themes/dist/';
-
 import config from 'content/meta/config';
-import menu from 'content/meta/menu';
-
-const LayoutThemed = themed({ themeStyle: layout })(Layout);
-const ArticleThemed = themed({ themeStyle: article })(Article);
-const BodytextThemed = themed({ themeStyle: bodytext })(Bodytext);
-const HeadingThemed = themed({ themeStyle: heading })(Heading);
+import menuItems from 'content/meta/menu';
 
 const IndexPage = props => {
   const {
@@ -40,19 +41,26 @@ const IndexPage = props => {
   const { headerTitle, headerSubTitle } = config;
 
   return (
-    <LayoutThemed
-      footerLinks={footerLinksHTML}
-      copyrightNote={copyrightNoteHTML}
-      headerTitle={headerTitle}
-      headerSubTitle={headerSubTitle}
-      menu={menu}
-    >
-      <ArticleThemed>
-        <HeadingThemed title={welcomeTitle} />
-        <BodytextThemed html={welcomeHTML} />
-      </ArticleThemed>
+    <Layout themeStyle={layout} menu={menu}>
+      <Header themeStyle={header} menu={menu}>
+        <Branding
+          themeStyle={branding}
+          title={headerTitle}
+          subTitle={headerSubTitle}
+        />
+        <Menu themeStyle={menu} items={menuItems} />
+      </Header>
+      <Article themeStyle={article}>
+        <Heading themeStyle={heading} title={welcomeTitle} />
+        <Bodytext themeStyle={bodytext} html={welcomeHTML} />
+      </Article>
+      <Footer
+        themeStyle={footer}
+        links={footerLinksHTML}
+        copyright={copyrightNoteHTML}
+      />
       <Seo config={config} />
-    </LayoutThemed>
+    </Layout>
   );
 };
 
