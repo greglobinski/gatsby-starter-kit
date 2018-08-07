@@ -116,28 +116,3 @@ export const query = graphql`
     }
   }
 `;
-
-export const categoryQuery = graphql`
-  query CategoryTemplateQuery($category: String) {
-    allMarkdownRemark(
-      limit: 1000
-      sort: { fields: [fields___prefix], order: DESC }
-      filter: { frontmatter: { category: { eq: $category } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          fields {
-            slug
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            category
-          }
-        }
-      }
-    }
-  }
-`;
