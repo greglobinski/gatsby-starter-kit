@@ -1,11 +1,10 @@
-import FaHome from 'react-icons/lib/fa/home';
-import FaInfo from 'react-icons/lib/fa/info';
-import FaBook from 'react-icons/lib/fa/book';
+import HomeIcon from 'react-feather/dist/icons/home';
+import InfoIcon from 'react-feather/dist/icons/info';
+import BlogIcon from 'react-feather/dist/icons/book';
 
 const menu = [
-  { label: 'Home', to: '/', icon: FaHome },
-  { label: 'Blog', to: '/blog', icon: FaBook },
-  { label: 'About', to: '/about', icon: FaInfo }
-];
+  { label: 'Home', to: '/', icon: HomeIcon },
+  { label: 'Blog', to: '/blog', icon: BlogIcon },
+  { label: 'About', to: '/about', icon: InfoIcon }
 
 export default menu;
