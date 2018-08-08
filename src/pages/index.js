@@ -21,7 +21,7 @@ import {
   article,
   heading,
   bodytext,
-} from '../../../../mynpms/react-website-themes/src/default';
+} from 'react-website-themes';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
