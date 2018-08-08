@@ -40,6 +40,7 @@
     "react-dom": "^16.3.2",
     "react-emotion": "^9.2.6",
     "react-facebook": "^5.0.3",
+    "react-feather": "^1.1.1",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7"
   },
