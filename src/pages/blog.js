@@ -1,6 +1,10 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 
+import CalendarIcon from 'react-feather/dist/icons/calendar';
+import UserIcon from 'react-feather/dist/icons/user';
+import TagIcon from 'react-feather/dist/icons/tag';
+
 import {
   // eslint-disable-next-line no-unused-vars
   global,
@@ -23,6 +27,12 @@ import {
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
+
+const metaIcons = {
+  calendar: CalendarIcon,
+  user: UserIcon,
+  tag: TagIcon,
+};
 
 const BlogPage = props => {
   const {
@@ -48,7 +58,12 @@ const BlogPage = props => {
         <Menu themeStyle={menu} items={menuItems} />
       </Header>
       <Article themeStyle={article}>
-        <Blog themeStyle={blog} items={posts} author={'greg'} />
+        <Blog
+          themeStyle={blog}
+          items={posts}
+          author={'greg'}
+          metaIcons={metaIcons}
+        />
       </Article>
       <Footer
         themeStyle={footer}

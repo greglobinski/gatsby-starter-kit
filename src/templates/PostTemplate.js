@@ -4,6 +4,17 @@ import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
 
+import { ShareButtonRectangle } from 'react-custom-share';
+
+import CalendarIcon from 'react-feather/dist/icons/calendar';
+import UserIcon from 'react-feather/dist/icons/user';
+import TagIcon from 'react-feather/dist/icons/tag';
+import PrevIcon from 'react-feather/dist/icons/arrow-left';
+import NextIcon from 'react-feather/dist/icons/arrow-right';
+import FacebookIcon from 'react-feather/dist/icons/facebook';
+import TwitterIcon from 'react-feather/dist/icons/twitter';
+import EmailIcon from 'react-feather/dist/icons/mail';
+
 import {
   // eslint-disable-next-line no-unused-vars
   global,
@@ -39,6 +50,17 @@ import {
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
 
+const metaIcons = {
+  calendar: CalendarIcon,
+  user: UserIcon,
+  tag: TagIcon,
+};
+
+const nextPrevIcons = {
+  next: NextIcon,
+  prev: PrevIcon,
+};
+
 const PostTemplate = props => {
   const {
     data: {
@@ -57,6 +79,19 @@ const PostTemplate = props => {
 
   const { headerTitle, headerSubTitle, siteUrl } = config;
 
+  const url = siteUrl + slug;
+  const shareBlockProps = {
+    url: url,
+    button: ShareButtonRectangle,
+    buttons: [
+      { network: 'Twitter', icon: TwitterIcon },
+      { network: 'Facebook', icon: FacebookIcon },
+      { network: 'Email', icon: EmailIcon },
+    ],
+    text: title,
+    longtext: excerpt,
+  };
+
   return (
     <Layout themeStyle={layout} menu={menu}>
       <Header themeStyle={header} menu={menu}>
@@ -74,16 +109,16 @@ const PostTemplate = props => {
           author="greg"
           prefix={prefix}
           categories={categories}
+          icons={metaIcons}
         />
         <Bodytext themeStyle={bodytext} html={postHTML} />
-        <Share
-          themeStyle={share}
-          slut={slug}
-          title={title}
-          excerpt={excerpt}
-          siteUrl={siteUrl}
+        <Share themeStyle={share} shareBlockProps={shareBlockProps} />
+        <NextPrev
+          themeStyle={nextPrev}
+          next={next}
+          prev={prev}
+          icons={nextPrevIcons}
         />
-        <NextPrev themeStyle={nextPrev} next={next} prev={prev} />
         <Author themeStyle={author} html={authorHTML} />
         <Comments slug={slug} siteUrl={siteUrl} themeStyle={comments} />
       </Article>
