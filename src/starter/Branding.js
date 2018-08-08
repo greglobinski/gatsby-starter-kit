@@ -8,7 +8,7 @@ const Branding = props => {
   return (
     <Link className="branding" to="/">
       <h1>{title}</h1>
-      <h2>{subTitle}</h2>
+      <p>{subTitle}</p>
     </Link>
   );
 };
