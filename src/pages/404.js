@@ -21,7 +21,7 @@ import {
   article,
   heading,
   bodytext,
-} from 'react-website-themes';
+} from 'react-website-themes/default';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
