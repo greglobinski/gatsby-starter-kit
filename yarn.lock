@@ -4977,11 +4977,11 @@ gatsby-plugin-catch-links@2.0.2-beta.4:
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
 
-gatsby-plugin-emotion@^1.1.17:
-  version "1.1.17"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-1.1.17.tgz#27b31f03ea47007aa84efa3b19b5653bf863af4b"
+gatsby-plugin-emotion@2.0.0-beta.3:
+  version "2.0.0-beta.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-2.0.0-beta.3.tgz#bd261ea4dde61102a1b449609d44dd097ddd5219"
   dependencies:
-    babel-runtime "^6.26.0"
+    "@babel/runtime" "7.0.0-beta.52"
 
 gatsby-plugin-google-analytics@2.0.0-beta.3:
   version "2.0.0-beta.3"
@@ -9420,6 +9420,10 @@ react-emotion@^9.2.6:
 react-error-overlay@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
+
+react-feather@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/react-feather/-/react-feather-1.1.1.tgz#dd59143af457601e68f2cd3bf32c0d94d30f89e7"
 
 react-helmet@^5.2.0:
   version "5.2.0"
