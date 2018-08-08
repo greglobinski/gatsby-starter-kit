@@ -37,7 +37,7 @@ const Footer = props => {
             <div className="credits">
               {/*
                 Please consider to not remove the credits section.
-                That's the best way to say to appreciate my work.
+                That's the best way to say you appreciate my work.
 
                 Thank you
 
