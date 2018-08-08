@@ -6,5 +6,6 @@ const menu = [
   { label: 'Home', to: '/', icon: HomeIcon },
   { label: 'Blog', to: '/blog', icon: BlogIcon },
   { label: 'About', to: '/about', icon: InfoIcon }
+];
 
 export default menu;
