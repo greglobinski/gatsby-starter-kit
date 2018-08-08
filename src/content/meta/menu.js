@@ -1,5 +1,5 @@
-import FaHome from 'react-icons/lib/fa/home';
+import HomeIcon from 'react-feather/dist/icons/home';
 
-const menu = [{ label: 'Home', to: '/', icon: FaHome }];
+const menu = [{ label: 'Home', to: '/', icon: HomeIcon }];
 
 export default menu;
