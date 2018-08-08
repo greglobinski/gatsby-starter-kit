@@ -34,6 +34,20 @@ const Footer = props => {
               className="copyright"
               dangerouslySetInnerHTML={{ __html: copyrightHTML }}
             />
+            <div className="credits">
+              {/*
+                Please consider to not remove the credits section.
+                That's the best way to say to appreciate my work.
+
+                Thank you
+
+                Greg Lobinski
+              */}
+              Built with{' '}
+              <a href="https://github.com/greglobinski/gatsby-starter-kit">
+                GatsbyJS Starter Kit
+              </a>.
+            </div>
           </footer>
         );
       }}
