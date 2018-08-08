@@ -1,10 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from 'starterComponents/Layout';
-import Article from 'starterComponents/Article';
-import Bodytext from 'starterComponents/Bodytext';
-import Heading from 'starterComponents/Heading';
+import Layout from 'starter/Layout';
+import Article from 'starter/Article';
+import Bodytext from 'starter/Bodytext';
+import Heading from 'starter/Heading';
 
 const IndexPage = props => {
   const {

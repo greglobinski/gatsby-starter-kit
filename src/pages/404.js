@@ -1,10 +1,10 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from 'starterComponents/Layout';
-import Article from 'starterComponents/Article';
-import Heading from 'starterComponents/Heading';
-import Bodytext from 'starterComponents/Bodytext';
+import Layout from 'starter/Layout';
+import Article from 'starter/Article';
+import Heading from 'starter/Heading';
+import Bodytext from 'starter/Bodytext';
 
 const NotFoundPage = props => {
   const {
