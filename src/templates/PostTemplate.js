@@ -34,7 +34,7 @@ import {
   share,
   author,
   comments,
-} from 'gatsby-starter-kit-themes/dist/default';
+} from '../../../../mynpms/react-website-themes/src/default';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
