@@ -32,7 +32,9 @@ The first command from the code above is equivalent to the command below. It ins
 gatsby new [NEW_DIRECTORY_FOR_YOUR_SITE] https://github.com/greglobinski/gatsby-starter-base.git#blog-with-content
 ```
 
-If you want to install other versions, use an appropriate flag at the end of repo url.
+Notice the `#blog-with-content` flag at the end.
+
+If you want to install other versions, use an appropriate flag at the end of the repo's url.
 
 #### minimal
 
