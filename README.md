@@ -62,7 +62,7 @@ gatsby new [NEW_DIRECTORY_FOR_YOUR_SITE] https://github.com/greglobinski/gatsby-
 
 ### Advanced usage
 
-Fork the [repo](https://github.com/greglobinski/gatsby-starter-kit) and clone it to your localhost.
+Fork the [repo](https://github.com/greglobinski/gatsby-starter-kit) and clone the fork to your localhost.
 
 ```
 git clone [URL_OF_YOUR_FORKED_REPOSITORY] [NEW_DIRECTORY_FOR_YOUR_SITE]
