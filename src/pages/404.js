@@ -1,27 +1,25 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import {
-  // eslint-disable-next-line no-unused-vars
-  global,
-  Layout,
-  Footer,
-  Header,
-  Branding,
-  Menu,
-  Article,
-  Heading,
-  Bodytext,
-  Seo,
-  layout,
-  footer,
-  header,
-  branding,
-  menu,
-  article,
-  heading,
-  bodytext,
-} from 'react-website-themes/default';
+import Article from 'react-website-themes/dist/default/components/Article';
+import Bodytext from 'react-website-themes/dist/default/components/Bodytext';
+import Branding from 'react-website-themes/dist/default/components/Branding';
+import Footer from 'react-website-themes/dist/default/components/Footer';
+import Header from 'react-website-themes/dist/default/components/Header';
+import Heading from 'react-website-themes/dist/default/components/Heading';
+import Layout from 'react-website-themes/dist/default/components/Layout';
+import Menu from 'react-website-themes/dist/default/components/Menu';
+import Seo from 'react-website-themes/dist/default/components/Seo';
+
+import 'react-website-themes/dist/default/styles/global';
+import article from 'react-website-themes/dist/default/styles/article';
+import bodytext from 'react-website-themes/dist/default/styles/bodytext';
+import branding from 'react-website-themes/dist/default/styles/branding';
+import footer from 'react-website-themes/dist/default/styles/footer';
+import header from 'react-website-themes/dist/default/styles/header';
+import heading from 'react-website-themes/dist/default/styles/heading';
+import layout from 'react-website-themes/dist/default/styles/layout';
+import menu from 'react-website-themes/dist/default/styles/menu';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
