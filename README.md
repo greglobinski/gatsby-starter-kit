@@ -12,8 +12,6 @@ You can choose between:
 - website
 - blog
 
-All starters include an opinionated structure of files and components.
-
 ## Usage
 
 ### Default usage
@@ -110,9 +108,11 @@ If you prefer, use `npm` instead of `yarn`.
 
 You can repeat the procedure with any of the branches.
 
-More instructions soon. So stay tuned by following me here on github or Twitter [@greglobinski](https://twitter.com/greglobinski)
+## Instructions
 
-## LICENSE
+More instructions soon. To be in touch follow [@greglobinski](https://twitter.com/greglobinski).
+
+## License
 
 MIT License
 
