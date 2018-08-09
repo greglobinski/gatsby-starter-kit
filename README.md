@@ -110,9 +110,9 @@ If you prefer, use `npm` instead of `yarn`.
 
 You can repeat the procedure with any of the branches.
 
-## Instructions
+## Details and instructions
 
-More instructions soon. To be in touch follow [@greglobinski](https://twitter.com/greglobinski).
+A detailed documentation on the way. To be in touch follow [@greglobinski](https://twitter.com/greglobinski).
 
 ## License
 
