@@ -2,8 +2,8 @@
 name: hero
 ---
 
-# This is a headline on Home page
+# Welcome to GatsbyJS Starter Kit
 
-This is a sub headline on Home page
+It's a series of starters for GatsbyJS: Minimal, Equipped, Themed, Website and Blog. It's 5 in 1!
 
 [more](./about)
