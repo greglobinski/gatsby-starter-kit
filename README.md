@@ -80,7 +80,7 @@ You will see a list of branches but only one is tracked locally - `master`.
 Let's assume that you want to install the `website` version with starting content. You have to tell git to track the proper branch.
 
 ```
-git checkout --track -b website-with-content origin/minimal
+git checkout --track origin/website-with-content
 ```
 
 You should see
