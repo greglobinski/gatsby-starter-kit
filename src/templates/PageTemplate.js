@@ -4,27 +4,15 @@ import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
 
-import {
-  // eslint-disable-next-line no-unused-vars
-  global,
-  Layout,
-  Footer,
-  Header,
-  Branding,
-  Menu,
-  Article,
-  Heading,
-  Bodytext,
-  Seo,
-  layout,
-  footer,
-  header,
-  branding,
-  menu,
-  article,
-  heading,
-  bodytext,
-} from '../../../../mynpms/react-website-themes/src/default';
+import Article from 'react-website-themes/dist/default/components/Article';
+import Bodytext from 'react-website-themes/dist/default/components/Bodytext';
+import Branding from 'react-website-themes/dist/default/components/Branding';
+import Footer from 'react-website-themes/dist/default/components/Footer';
+import Header from 'react-website-themes/dist/default/components/Header';
+import Heading from 'react-website-themes/dist/default/components/Heading';
+import Layout from 'react-website-themes/dist/default/components/Layout';
+import Menu from 'react-website-themes/dist/default/components/Menu';
+import Seo from 'react-website-themes/dist/default/components/Seo';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
@@ -32,7 +20,6 @@ import menuItems from 'content/meta/menu';
 const PageTemplate = props => {
   const {
     data: {
-      page,
       page: {
         html: pageHTML,
         frontmatter: { title },
@@ -46,24 +33,16 @@ const PageTemplate = props => {
   const { headerTitle, headerSubTitle } = config;
 
   return (
-    <Layout themeStyle={layout} menu={menu}>
-      <Header themeStyle={header} menu={menu}>
-        <Branding
-          themeStyle={branding}
-          title={headerTitle}
-          subTitle={headerSubTitle}
-        />
-        <Menu themeStyle={menu} items={menuItems} />
+    <Layout>
+      <Header>
+        <Branding title={headerTitle} subTitle={headerSubTitle} />
+        <Menu items={menuItems} />
       </Header>
-      <Article themeStyle={article}>
-        <Heading themeStyle={heading} title={title} />
-        <Bodytext themeStyle={bodytext} html={pageHTML} />
+      <Article>
+        <Heading title={title} />
+        <Bodytext html={pageHTML} />
       </Article>
-      <Footer
-        themeStyle={footer}
-        links={footerLinksHTML}
-        copyright={copyrightHTML}
-      />
+      <Footer links={footerLinksHTML} copyright={copyrightHTML} />
       <Seo config={config} />
     </Layout>
   );
