@@ -1,23 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import {
-  // eslint-disable-next-line no-unused-vars
-  global,
-  Layout,
-  Hero,
-  Footer,
-  Header,
-  Branding,
-  Menu,
-  Seo,
-  layout,
-  hero,
-  footer,
-  header,
-  branding,
-  menu,
-} from '../../../../mynpms/react-website-themes/src/default';
+import Branding from 'react-website-themes/dist/default/components/Branding';
+import Footer from 'react-website-themes/dist/default/components/Footer';
+import Header from 'react-website-themes/dist/default/components/Header';
+import Hero from 'react-website-themes/dist/default/components/Hero';
+import Layout from 'react-website-themes/dist/default/components/Layout';
+import Menu from 'react-website-themes/dist/default/components/Menu';
+import Seo from 'react-website-themes/dist/default/components/Seo';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
@@ -34,21 +24,13 @@ const IndexPage = props => {
   const { headerTitle, headerSubTitle } = config;
 
   return (
-    <Layout themeStyle={layout} menu={menu}>
-      <Header themeStyle={header} menu={menu}>
-        <Branding
-          themeStyle={branding}
-          title={headerTitle}
-          subTitle={headerSubTitle}
-        />
-        <Menu themeStyle={menu} items={menuItems} />
+    <Layout>
+      <Header>
+        <Branding title={headerTitle} subTitle={headerSubTitle} />
+        <Menu items={menuItems} />
       </Header>
-      <Hero themeStyle={hero} html={heroHTML} />
-      <Footer
-        themeStyle={footer}
-        links={footerLinksHTML}
-        copyright={copyrightHTML}
-      />
+      <Hero html={heroHTML} />
+      <Footer links={footerLinksHTML} copyright={copyrightHTML} />
       <Seo config={config} />
     </Layout>
   );
