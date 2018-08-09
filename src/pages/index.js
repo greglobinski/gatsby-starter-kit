@@ -1,0 +1,57 @@
+import React from 'react';
+import { graphql } from 'gatsby';
+
+import Branding from 'react-website-themes/dist/default/components/Branding';
+import Footer from 'react-website-themes/dist/default/components/Footer';
+import Header from 'react-website-themes/dist/default/components/Header';
+import Hero from 'react-website-themes/dist/default/components/Hero';
+import Layout from 'react-website-themes/dist/default/components/Layout';
+import Menu from 'react-website-themes/dist/default/components/Menu';
+import Seo from 'react-website-themes/dist/default/components/Seo';
+
+import config from 'content/meta/config';
+import menuItems from 'content/meta/menu';
+
+const IndexPage = props => {
+  const {
+    data: {
+      footerLinks: { html: footerLinksHTML },
+      hero: { html: heroHTML },
+      copyright: { html: copyrightHTML },
+    },
+  } = props;
+
+  const { headerTitle, headerSubTitle } = config;
+
+  return (
+    <Layout>
+      <Header>
+        <Branding title={headerTitle} subTitle={headerSubTitle} />
+        <Menu items={menuItems} />
+      </Header>
+      <Hero html={heroHTML} />
+      <Footer links={footerLinksHTML} copyright={copyrightHTML} />
+      <Seo config={config} />
+    </Layout>
+  );
+};
+
+export default IndexPage;
+
+export const query = graphql`
+  query {
+    hero: markdownRemark(fileAbsolutePath: { regex: "/content/parts/hero/" }) {
+      html
+    }
+    footerLinks: markdownRemark(
+      fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
+    ) {
+      html
+    }
+    copyright: markdownRemark(
+      fileAbsolutePath: { regex: "/content/parts/copyright/" }
+    ) {
+      html
+    }
+  }
+`;
