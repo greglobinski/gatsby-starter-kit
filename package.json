@@ -11,13 +11,13 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "gatsby": "2.0.0-beta.56",
+    "gatsby": "2.0.0-beta.98",
     "gatsby-image": "2.0.0-beta.7",
-    "gatsby-plugin-catch-links": "2.0.2-beta.4",
+    "gatsby-plugin-catch-links": "2.0.2-beta.7",
     "gatsby-plugin-resolve-src": "2.0.0-beta.1",
     "gatsby-plugin-sharp": "2.0.0-beta.7",
     "gatsby-source-filesystem": "2.0.1-beta.10",
-    "gatsby-transformer-remark": "2.1.1-beta.3",
+    "gatsby-transformer-remark": "2.1.1-beta.6",
     "prop-types": "^15.6.2",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
