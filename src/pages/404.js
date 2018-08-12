@@ -5,7 +5,7 @@ import Layout from 'starter/Layout';
 import Article from 'starter/Article';
 import Heading from 'starter/Heading';
 import Bodytext from 'starter/Bodytext';
-import Seo from 'starterComponents/Seo';
+import Seo from 'starter/Seo';
 
 const NotFoundPage = props => {
   const {

@@ -5,7 +5,7 @@ import Layout from 'starter/Layout';
 import Article from 'starter/Article';
 import Bodytext from 'starter/Bodytext';
 import Heading from 'starter/Heading';
-import Seo from 'starterComponents/Seo';
+import Seo from 'starter/Seo';
 
 const IndexPage = props => {
   const {
