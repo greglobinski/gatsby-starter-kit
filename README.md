@@ -1,8 +1,8 @@
 <br />
 <br />
-<div style="text-align: center;">
+<p align="center">
 <img src="./assets/logo.png" alt="Gatsby Starter Kit" width="400"/>
-</div>
+</p>
 <br />
 <br />
 
