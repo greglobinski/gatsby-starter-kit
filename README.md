@@ -5,9 +5,8 @@
 
 <br />
 <br />
-Gatsby Starter Kit is a set of starters for Gatsby.js v2.
-
-<center><font size="5"><a href="https://greglobinski.github.io/gatsby-starter-kit-docs/">Documentation</a></font></center>
+Gatsby Starter Kit is a set of starters for Gatsby.js v2. 
+<br /><a href="https://greglobinski.github.io/gatsby-starter-kit-docs/">Documentation</a>
 
 </p>
 <br />
