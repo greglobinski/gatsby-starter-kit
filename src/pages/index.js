@@ -1,13 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Branding from 'react-website-themes/dist/default/components/Branding';
-import Footer from 'react-website-themes/dist/default/components/Footer';
-import Header from 'react-website-themes/dist/default/components/Header';
-import Hero from 'react-website-themes/dist/default/components/Hero';
-import Layout from 'react-website-themes/dist/default/components/Layout';
-import Menu from 'react-website-themes/dist/default/components/Menu';
-import Seo from 'react-website-themes/dist/default/components/Seo';
+import Branding from '@react-website-themes/default/components/Branding';
+import Footer from '@react-website-themes/default/components/Footer';
+import Header from '@react-website-themes/default/components/Header';
+import Hero from '@react-website-themes/default/components/Hero';
+import Layout from '@react-website-themes/default/components/Layout';
+import Menu from '@react-website-themes/default/components/Menu';
+import Seo from '@react-website-themes/default/components/Seo';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
