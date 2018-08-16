@@ -6,20 +6,20 @@ import 'prismjs/themes/prism-okaidia.css';
 
 import { ShareButtonRectangle } from 'react-custom-share';
 
-import Article from 'react-website-themes/dist/default/components/Article';
-import Author from 'react-website-themes/dist/default/components/Author';
-import Branding from 'react-website-themes/dist/default/components/Branding';
-import Bodytext from 'react-website-themes/dist/default/components/Bodytext';
-import Comments from 'react-website-themes/dist/default/components/Comments';
-import Footer from 'react-website-themes/dist/default/components/Footer';
-import Header from 'react-website-themes/dist/default/components/Header';
-import Heading from 'react-website-themes/dist/default/components/Heading';
-import Layout from 'react-website-themes/dist/default/components/Layout';
-import Menu from 'react-website-themes/dist/default/components/Menu';
-import Meta from 'react-website-themes/dist/default/components/Meta';
-import NextPrev from 'react-website-themes/dist/default/components/NextPrev';
-import Seo from 'react-website-themes/dist/default/components/Seo';
-import Share from 'react-website-themes/dist/default/components/Share';
+import Article from '@react-website-themes/default/components/Article';
+import Author from '@react-website-themes/default/components/Author';
+import Branding from '@react-website-themes/default/components/Branding';
+import Bodytext from '@react-website-themes/default/components/Bodytext';
+import Comments from '@react-website-themes/default/components/Comments';
+import Footer from '@react-website-themes/default/components/Footer';
+import Header from '@react-website-themes/default/components/Header';
+import Heading from '@react-website-themes/default/components/Heading';
+import Layout from '@react-website-themes/default/components/Layout';
+import Menu from '@react-website-themes/default/components/Menu';
+import Meta from '@react-website-themes/default/components/Meta';
+import NextPrev from '@react-website-themes/default/components/NextPrev';
+import Seo from '@react-website-themes/default/components/Seo';
+import Share from '@react-website-themes/default/components/Share';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
