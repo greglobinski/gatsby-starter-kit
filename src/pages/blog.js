@@ -5,14 +5,14 @@ import CalendarIcon from 'react-feather/dist/icons/calendar';
 import UserIcon from 'react-feather/dist/icons/user';
 import TagIcon from 'react-feather/dist/icons/tag';
 
-import Article from 'react-website-themes/dist/default/components/Article';
-import Branding from 'react-website-themes/dist/default/components/Branding';
-import Footer from 'react-website-themes/dist/default/components/Footer';
-import Header from 'react-website-themes/dist/default/components/Header';
-import Blog from 'react-website-themes/dist/default/components/Blog';
-import Layout from 'react-website-themes/dist/default/components/Layout';
-import Menu from 'react-website-themes/dist/default/components/Menu';
-import Seo from 'react-website-themes/dist/default/components/Seo';
+import Article from '@react-website-themes/default/components/Article';
+import Branding from '@react-website-themes/default/components/Branding';
+import Footer from '@react-website-themes/default/components/Footer';
+import Header from '@react-website-themes/default/components/Header';
+import Blog from '@react-website-themes/default/components/Blog';
+import Layout from '@react-website-themes/default/components/Layout';
+import Menu from '@react-website-themes/default/components/Menu';
+import Seo from '@react-website-themes/default/components/Seo';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
