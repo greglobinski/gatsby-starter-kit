@@ -11,6 +11,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
+    "@react-website-themes/default": "^0.0.11",
     "emotion": "^9.2.6",
     "emotion-server": "^9.2.6",
     "facepaint": "^1.2.1",
@@ -39,8 +40,7 @@
     "react-dom": "^16.3.2",
     "react-emotion": "^9.2.6",
     "react-feather": "^1.1.1",
-    "react-helmet": "^5.2.0",
-    "react-website-themes": "^0.0.4"
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
     "babel-eslint": "7.2.3",
