@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
 import CalendarIcon from 'react-feather/dist/icons/calendar';
 import UserIcon from 'react-feather/dist/icons/user';
@@ -34,7 +34,14 @@ const BlogPage = props => {
 
   const posts = edges.map(edge => edge.node);
 
-  const { headerTitle, headerSubTitle } = config;
+  const {
+    headerTitle,
+    headerSubTitle,
+    siteUrl,
+    siteTitle,
+    siteDescription,
+    siteLanguage,
+  } = config;
 
   return (
     <Layout>
@@ -46,7 +53,12 @@ const BlogPage = props => {
         <Blog items={posts} author={'greg'} metaIcons={metaIcons} />
       </Article>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
-      <Seo config={config} />
+      <Seo
+        url={siteUrl}
+        language={siteLanguage}
+        title={siteTitle}
+        description={siteDescription}
+      />
     </Layout>
   );
 };
@@ -56,7 +68,7 @@ export default BlogPage;
 export const query = graphql`
   query {
     posts: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//posts/[0-9]+.*--/" } }
+      filter: { fields: { source: { eq: "posts" }, slug: { ne: null } } }
       sort: { fields: [fields___prefix], order: DESC }
     ) {
       edges {
@@ -65,7 +77,6 @@ export const query = graphql`
           fields {
             slug
             prefix
-            identifier
           }
           frontmatter {
             title

@@ -21,7 +21,14 @@ const IndexPage = props => {
     },
   } = props;
 
-  const { headerTitle, headerSubTitle } = config;
+  const {
+    headerTitle,
+    headerSubTitle,
+    siteUrl,
+    siteTitle,
+    siteDescription,
+    siteLanguage,
+  } = config;
 
   return (
     <Layout>
@@ -31,7 +38,12 @@ const IndexPage = props => {
       </Header>
       <Hero html={heroHTML} />
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
-      <Seo config={config} />
+      <Seo
+        url={siteUrl}
+        language={siteLanguage}
+        title={siteTitle}
+        description={siteDescription}
+      />
     </Layout>
   );
 };

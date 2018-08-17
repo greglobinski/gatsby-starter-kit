@@ -4,32 +4,50 @@ const Promise = require('bluebird');
 
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
+const SLUG_SEPARATOR = '___';
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
   if (node.internal.type === `MarkdownRemark`) {
+    const fileNode = getNode(node.parent);
     const filePath = createFilePath({ node, getNode });
 
-    const separtorIndex = ~filePath.indexOf('--') ? filePath.indexOf('--') : 0;
-    const slugStart = separtorIndex ? separtorIndex + 2 : 0;
+    const source = fileNode.sourceInstanceName;
 
-    const slug = `${separtorIndex ? '/' : ''}${filePath.substring(slugStart)}`;
-    const identifier = slug.replace(/\//g, '');
-    const prefix = separtorIndex ? filePath.substring(1, separtorIndex) : '';
+    const separatorExists = ~filePath.indexOf(SLUG_SEPARATOR);
 
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    });
-    createNodeField({
-      node,
-      name: `identifier`,
-      value: identifier,
-    });
+    let slug;
+    let prefix;
+
+    if (separatorExists) {
+      const separatorPosition = filePath.indexOf(SLUG_SEPARATOR);
+      const slugBeginning = separatorPosition + SLUG_SEPARATOR.length;
+      slug =
+        separatorPosition === 1
+          ? null
+          : `/${filePath.substring(slugBeginning)}`;
+      prefix = filePath.substring(1, separatorPosition);
+    } else {
+      slug = filePath;
+      prefix = '';
+    }
+
+    if (source !== 'parts') {
+      createNodeField({
+        node,
+        name: `slug`,
+        value: slug,
+      });
+    }
     createNodeField({
       node,
       name: `prefix`,
       value: prefix,
+    });
+    createNodeField({
+      node,
+      name: `source`,
+      value: source,
     });
   }
 };
@@ -48,7 +66,7 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(`
         {
           allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "//posts|pages//" } }
+            filter: { fields: { slug: { ne: null } } }
             sort: { fields: [fields___prefix], order: DESC }
             limit: 1000
           ) {
@@ -57,8 +75,8 @@ exports.createPages = ({ graphql, actions }) => {
                 fileAbsolutePath
                 fields {
                   slug
-                  identifier
                   prefix
+                  source
                 }
                 frontmatter {
                   title
@@ -134,12 +152,14 @@ exports.createPages = ({ graphql, actions }) => {
         );
         pages.forEach(({ node }) => {
           const slug = node.fields.slug;
+          const source = node.fields.source;
 
           createPage({
             path: slug,
             component: pageTemplate,
             context: {
               slug,
+              source,
             },
           });
         });

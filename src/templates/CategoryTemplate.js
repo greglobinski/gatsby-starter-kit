@@ -30,7 +30,14 @@ const PageTemplate = props => {
 
   const items = edges.map(edge => edge.node);
 
-  const { headerTitle, headerSubTitle } = config;
+  const {
+    headerTitle,
+    headerSubTitle,
+    siteUrl,
+    siteDescription,
+    siteLanguage,
+    siteTitlePostfix,
+  } = config;
 
   return (
     <Layout>
@@ -51,7 +58,12 @@ const PageTemplate = props => {
         <List items={items} />
       </Article>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
-      <Seo config={config} />
+      <Seo
+        url={`${siteUrl}/categories/${category}/`}
+        language={siteLanguage}
+        title={`Posts in category: ${category}${siteTitlePostfix}`}
+        description={siteDescription}
+      />
     </Layout>
   );
 };
