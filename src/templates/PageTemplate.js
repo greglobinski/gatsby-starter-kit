@@ -54,7 +54,7 @@ const PageTemplate = props => {
       <Seo
         url={`${siteUrl}${slug}`}
         language={siteLanguage}
-        title={`${siteTitle}${siteTitlePostfix}`}
+        title={`${title}${siteTitlePostfix}`}
         description={excerpt}
       />
     </Layout>
