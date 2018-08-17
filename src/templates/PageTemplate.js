@@ -24,13 +24,21 @@ const PageTemplate = props => {
         html: pageHTML,
         frontmatter: { title },
         fields: { slug },
+        excerpt,
       },
       footerLinks: { html: footerLinksHTML },
       copyright: { html: copyrightHTML },
     },
   } = props;
 
-  const { headerTitle, headerSubTitle } = config;
+  const {
+    headerTitle,
+    headerSubTitle,
+    siteUrl,
+    siteTitle,
+    siteLanguage,
+    siteTitlePostfix,
+  } = config;
 
   return (
     <Layout>
@@ -43,7 +51,12 @@ const PageTemplate = props => {
         <Bodytext html={pageHTML} />
       </Article>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
-      <Seo config={config} />
+      <Seo
+        url={`${siteUrl}${slug}`}
+        language={siteLanguage}
+        title={`${title}${siteTitlePostfix}`}
+        description={excerpt}
+      />
     </Layout>
   );
 };
@@ -59,6 +72,7 @@ export const query = graphql`
   query PageTemplateQuery($slug: String!) {
     page: markdownRemark(fields: { slug: { eq: $slug } }) {
       html
+      excerpt
       fileAbsolutePath
       fields {
         slug

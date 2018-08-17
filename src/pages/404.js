@@ -23,7 +23,14 @@ const NotFoundPage = props => {
     },
   } = props;
 
-  const { headerTitle, headerSubTitle } = config;
+  const {
+    headerTitle,
+    headerSubTitle,
+    siteUrl,
+    siteTitle,
+    siteDescription,
+    siteLanguage,
+  } = config;
 
   return (
     <Layout>
@@ -36,7 +43,12 @@ const NotFoundPage = props => {
         <Bodytext html={notFoundHTML} />
       </Article>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
-      <Seo config={config} />
+      <Seo
+        url={siteUrl}
+        language={siteLanguage}
+        title={siteTitle}
+        description={siteDescription}
+      />
     </Layout>
   );
 };

@@ -70,7 +70,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -78,5 +77,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-sitemap`,
   ],
 };
