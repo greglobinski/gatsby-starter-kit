@@ -21,9 +21,14 @@ const IndexPage = props => {
     },
   } = props;
 
-  const { siteTitle, siteDescription, siteLanguage, siteUrl } = config;
-
-  const { headerTitle, headerSubTitle } = config;
+  const {
+    headerTitle,
+    headerSubTitle,
+    siteUrl,
+    siteTitle,
+    siteDescription,
+    siteLanguage,
+  } = config;
 
   return (
     <Layout>
