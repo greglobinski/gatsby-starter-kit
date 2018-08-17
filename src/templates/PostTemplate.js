@@ -60,7 +60,14 @@ const PostTemplate = props => {
     pageContext: { next, prev },
   } = props;
 
-  const { headerTitle, headerSubTitle, siteUrl } = config;
+  const {
+    headerTitle,
+    headerSubTitle,
+    siteUrl,
+    siteTitle,
+    siteLanguage,
+    siteTitlePostfix,
+  } = config;
 
   const url = siteUrl + slug;
   const shareBlockProps = {
@@ -96,7 +103,12 @@ const PostTemplate = props => {
         <Comments slug={slug} siteUrl={siteUrl} />
       </Article>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
-      <Seo config={config} />
+      <Seo
+        url={`${siteUrl}${slug}`}
+        language={siteLanguage}
+        title={`${title}${siteTitlePostfix}`}
+        description={excerpt}
+      />
     </Layout>
   );
 };
