@@ -31,7 +31,14 @@ const PageTemplate = props => {
     },
   } = props;
 
-  const { headerTitle, headerSubTitle, siteLanguage } = config;
+  const {
+    headerTitle,
+    headerSubTitle,
+    siteUrl,
+    siteTitle,
+    siteLanguage,
+    siteTitlePostfix,
+  } = config;
 
   return (
     <Layout>
@@ -45,10 +52,10 @@ const PageTemplate = props => {
       </Article>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
       <Seo
+        url={`${siteUrl}${slug}`}
         language={siteLanguage}
-        title={title}
+        title={`${siteTitle}${siteTitlePostfix}`}
         description={excerpt}
-        url={slug}
       />
     </Layout>
   );
