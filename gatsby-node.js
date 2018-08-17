@@ -13,25 +13,31 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
     const source = fileNode.sourceInstanceName;
 
-    const separtorIndex = ~filePath.indexOf(SLUG_SEPARATOR)
-      ? filePath.indexOf(SLUG_SEPARATOR)
-      : 0;
-    const slugIndex = separtorIndex ? separtorIndex + SLUG_SEPARATOR.length : 0;
+    const separatorExists = ~filePath.indexOf(SLUG_SEPARATOR);
 
-    const slug = `${separtorIndex ? '/' : ''}${filePath.substring(slugIndex)}`;
-    const identifier = slug.replace(/\//g, '');
-    const prefix = separtorIndex ? filePath.substring(1, separtorIndex) : '';
+    let slug;
+    let prefix;
 
-    createNodeField({
-      node,
-      name: `slug`,
-      value: slug,
-    });
-    createNodeField({
-      node,
-      name: `identifier`,
-      value: identifier,
-    });
+    if (separatorExists) {
+      const separatorPosition = filePath.indexOf(SLUG_SEPARATOR);
+      const slugBeginning = separatorPosition + SLUG_SEPARATOR.length;
+      slug =
+        separatorPosition === 1
+          ? null
+          : `/${filePath.substring(slugBeginning)}`;
+      prefix = filePath.substring(1, separatorPosition);
+    } else {
+      slug = filePath;
+      prefix = '';
+    }
+
+    if (source !== 'parts') {
+      createNodeField({
+        node,
+        name: `slug`,
+        value: slug,
+      });
+    }
     createNodeField({
       node,
       name: `prefix`,
@@ -55,7 +61,7 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(`
         {
           allMarkdownRemark(
-            filter: { fileAbsolutePath: { regex: "//pages//" } }
+            filter: { fields: { slug: { ne: null } } }
             sort: { fields: [fields___prefix], order: DESC }
             limit: 1000
           ) {
@@ -64,8 +70,8 @@ exports.createPages = ({ graphql, actions }) => {
                 fileAbsolutePath
                 fields {
                   slug
-                  identifier
                   prefix
+                  source
                 }
                 frontmatter {
                   title
@@ -106,12 +112,14 @@ exports.createPages = ({ graphql, actions }) => {
         );
         pages.forEach(({ node }) => {
           const slug = node.fields.slug;
+          const source = node.fields.source;
 
           createPage({
             path: slug,
             component: pageTemplate,
             context: {
               slug,
+              source,
             },
           });
         });
