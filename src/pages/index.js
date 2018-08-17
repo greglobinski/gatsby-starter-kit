@@ -21,13 +21,7 @@ const IndexPage = props => {
     },
   } = props;
 
-  const {
-    siteTitle,
-    siteTitlePostfix,
-    siteDescription,
-    siteLanguage,
-    siteUrl,
-  } = config;
+  const { siteTitle, siteDescription, siteLanguage, siteUrl } = config;
 
   const { headerTitle, headerSubTitle } = config;
 
