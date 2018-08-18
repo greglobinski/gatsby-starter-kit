@@ -1,6 +1,4 @@
 {
-  "cacheDirectory": true,
-  "babelrc": false,
   "presets": [
     [
       "@babel/preset-env",
@@ -37,12 +35,12 @@
       }
     ],
     "@babel/plugin-syntax-dynamic-import",
+    "babel-plugin-macros",
     [
       "@babel/plugin-transform-runtime",
       {
         "helpers": true,
-        "regenerator": true,
-        "polyfill": false
+        "regenerator": true
       }
     ]
   ]
