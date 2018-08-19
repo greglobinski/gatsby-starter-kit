@@ -4,6 +4,8 @@ import React from 'react';
 import TagIcon from 'react-feather/dist/icons/tag';
 
 import 'prismjs/themes/prism-okaidia.css';
+import '@react-website-themes/default/styles/variables';
+import '@react-website-themes/default/styles/global';
 
 import Article from '@react-website-themes/default/components/Article';
 import Branding from '@react-website-themes/default/components/Branding';
