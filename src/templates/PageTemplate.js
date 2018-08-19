@@ -4,15 +4,15 @@ import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
 
-import Article from '@react-website-themes/default/components/Article';
-import Branding from '@react-website-themes/default/components/Branding';
-import Bodytext from '@react-website-themes/default/components/Bodytext';
-import Footer from '@react-website-themes/default/components/Footer';
-import Header from '@react-website-themes/default/components/Header';
-import Heading from '@react-website-themes/default/components/Heading';
-import Layout from '@react-website-themes/default/components/Layout';
-import Menu from '@react-website-themes/default/components/Menu';
-import Seo from '@react-website-themes/default/components/Seo';
+import Article from '@react-website-themes/classy-docs/components/Article';
+import Branding from '@react-website-themes/classy-docs/components/Branding';
+import Bodytext from '@react-website-themes/classy-docs/components/Bodytext';
+import Footer from '@react-website-themes/classy-docs/components/Footer';
+import Header from '@react-website-themes/classy-docs/components/Header';
+import Heading from '@react-website-themes/classy-docs/components/Heading';
+import Layout from '@react-website-themes/classy-docs/components/Layout';
+import Menu from '@react-website-themes/classy-docs/components/Menu';
+import Seo from '@react-website-themes/classy-docs/components/Seo';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
