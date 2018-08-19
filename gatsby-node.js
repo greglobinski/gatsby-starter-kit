@@ -124,12 +124,11 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         // Create posts
-        const posts = items.filter(item =>
-          /posts/.test(item.node.fileAbsolutePath)
+        const posts = items.filter(item => item =>
+          item.node.fields.source === 'posts' && item.node.fields.slug
         );
         posts.forEach(({ node }, index) => {
           const slug = node.fields.slug;
-          const identifier = node.fields.identifier;
           const next = index === 0 ? undefined : posts[index - 1].node;
           const prev =
             index === posts.length - 1 ? undefined : posts[index + 1].node;
@@ -139,7 +138,6 @@ exports.createPages = ({ graphql, actions }) => {
             component: postTemplate,
             context: {
               slug,
-              identifier,
               prev,
               next,
             },
@@ -147,9 +145,10 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         // create pages
-        const pages = items.filter(item =>
-          /pages/.test(item.node.fileAbsolutePath)
+        const pages = items.filter(
+          item => item.node.fields.source === 'pages' && item.node.fields.slug
         );
+
         pages.forEach(({ node }) => {
           const slug = node.fields.slug;
           const source = node.fields.source;
@@ -166,27 +165,4 @@ exports.createPages = ({ graphql, actions }) => {
       })
     );
   });
-};
-
-exports.onCreateWebpackConfig = ({
-  stage,
-  rules,
-  loaders,
-  plugins,
-  actions,
-}) => {
-  switch (stage) {
-    case 'build-javascript':
-      actions.setWebpackConfig({
-        module: {
-          rules: [
-            {
-              test: /\.yaml$/,
-              include: path.resolve('data'),
-              loader: 'yaml',
-            },
-          ],
-        },
-      });
-  }
 };
