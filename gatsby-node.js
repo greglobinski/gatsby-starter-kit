@@ -125,11 +125,10 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create posts
         const posts = items.filter(item => item =>
-          item.node.source === 'posts' && item.node.fields.slug
+          item.node.fields.source === 'posts' && item.node.fields.slug
         );
         posts.forEach(({ node }, index) => {
           const slug = node.fields.slug;
-          const identifier = node.fields.identifier;
           const next = index === 0 ? undefined : posts[index - 1].node;
           const prev =
             index === posts.length - 1 ? undefined : posts[index + 1].node;
@@ -139,7 +138,6 @@ exports.createPages = ({ graphql, actions }) => {
             component: postTemplate,
             context: {
               slug,
-              identifier,
               prev,
               next,
             },
@@ -148,7 +146,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // create pages
         const pages = items.filter(
-          item => item.node.source === 'pages' && item.node.fields.slug
+          item => item.node.fields.source === 'pages' && item.node.fields.slug
         );
 
         pages.forEach(({ node }) => {
