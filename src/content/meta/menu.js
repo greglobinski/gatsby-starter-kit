@@ -1,10 +1,10 @@
 import HomeIcon from 'react-feather/dist/icons/home';
-import FolderIcon from 'react-feather/dist/icons/folder';
+import ListIcon from 'react-feather/dist/icons/list';
 import InfoIcon from 'react-feather/dist/icons/info';
 
 const menu = [
   { label: 'Home', to: '/', icon: HomeIcon },
-  { label: 'Catalog', to: '/catalog', icon: FolderIcon },
+  { label: 'Menu', to: '/content', icon: ListIcon },
   { label: 'About', to: '/about', icon: InfoIcon }
 ];
 
