@@ -124,8 +124,8 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         // Create posts
-        const posts = items.filter(item =>
-          /posts/.test(item.node.fileAbsolutePath)
+        const posts = items.filter(item => item =>
+          item.node.source === 'posts' && item.node.fields.slug
         );
         posts.forEach(({ node }, index) => {
           const slug = node.fields.slug;
@@ -147,7 +147,9 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         // create pages
-        const pages = items.filter(item => item.node.fields.slug);
+        const pages = items.filter(
+          item => item.node.source === 'pages' && item.node.fields.slug
+        );
 
         pages.forEach(({ node }) => {
           const slug = node.fields.slug;
