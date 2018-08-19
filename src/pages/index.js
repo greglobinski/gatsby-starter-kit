@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 import Branding from '@react-website-themes/classy-docs/components/Branding';
 import Footer from '@react-website-themes/classy-docs/components/Footer';
@@ -18,6 +19,9 @@ const IndexPage = props => {
       footerLinks: { html: footerLinksHTML },
       hero: { html: heroHTML },
       copyright: { html: copyrightHTML },
+      logo: {
+        childImageSharp: { fluid: logoFluid },
+      },
     },
   } = props;
 
@@ -36,7 +40,10 @@ const IndexPage = props => {
         <Branding title={headerTitle} subTitle={headerSubTitle} />
         <Menu items={menuItems} />
       </Header>
-      <Hero html={heroHTML} />
+      <Hero>
+        <Img fluid={logoFluid} className="image" />
+        <div dangerouslySetInnerHTML={{ __html: heroHTML }} />
+      </Hero>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
       <Seo
         url={siteUrl}
@@ -52,6 +59,13 @@ export default IndexPage;
 
 export const query = graphql`
   query {
+    logo: file(relativePath: { regex: "/logo.png/" }) {
+      childImageSharp {
+        fluid(maxWidth: 500) {
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
+        }
+      }
+    }
     hero: markdownRemark(fileAbsolutePath: { regex: "/content/parts/hero/" }) {
       html
     }
