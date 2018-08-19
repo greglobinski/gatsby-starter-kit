@@ -796,11 +796,12 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@react-website-themes/default@^0.0.14":
+"@react-website-themes/classy-docs@^0.0.14":
   version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@react-website-themes/default/-/default-0.0.14.tgz#c469c0407a44eabdb936837e22c5a0b05d5d84e5"
+  resolved "https://registry.yarnpkg.com/@react-website-themes/classy-docs/-/classy-docs-0.0.14.tgz#c7afc3ab5188ae3e31f6a03ec689febf722de6c0"
   dependencies:
-    typeface-open-sans "^0.0.54"
+    github-slugger "^1.2.0"
+    typeface-merriweather-sans "^0.0.54"
 
 "@types/configstore@^2.1.1":
   version "2.1.1"
@@ -5064,6 +5065,15 @@ gatsby-react-router-scroll@^2.0.0-beta.8:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
+gatsby-remark-autolink-headers@2.0.0-beta.5:
+  version "2.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-autolink-headers/-/gatsby-remark-autolink-headers-2.0.0-beta.5.tgz#15f54e5d40012c3786148325a604a9515a658ca0"
+  dependencies:
+    "@babel/runtime" "7.0.0-beta.52"
+    github-slugger "^1.1.1"
+    mdast-util-to-string "^1.0.2"
+    unist-util-visit "^1.3.0"
+
 gatsby-remark-copy-linked-files@2.0.0-beta.3:
   version "2.0.0-beta.3"
   resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-2.0.0-beta.3.tgz#fe21e5f0ded178d559c99ddfaac61ec081d2fa89"
@@ -5374,7 +5384,7 @@ github-from-package@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/github-from-package/-/github-from-package-0.0.0.tgz#97fb5d96bfde8973313f20e8288ef9a167fa64ce"
 
-github-slugger@^1.1.1:
+github-slugger@^1.1.1, github-slugger@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/github-slugger/-/github-slugger-1.2.0.tgz#8ada3286fd046d8951c3c952a8d7854cfd90fd9a"
   dependencies:
@@ -11293,9 +11303,9 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typeface-open-sans@^0.0.54:
+typeface-merriweather-sans@^0.0.54:
   version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-open-sans/-/typeface-open-sans-0.0.54.tgz#20f5b5ea5c7f95d89dc1f8b2d2b1457680129cee"
+  resolved "https://registry.yarnpkg.com/typeface-merriweather-sans/-/typeface-merriweather-sans-0.0.54.tgz#23677ba5115f5fee9c9a49e5eee519011d5b07fe"
 
 ua-parser-js@^0.7.18:
   version "0.7.18"

@@ -21,9 +21,18 @@ module.exports = {
         path: `${__dirname}/src/content/pages/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `docs`,
+        path: `${__dirname}/src/content/docs/`,
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-catch-links`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -39,23 +48,17 @@ module.exports = {
           `gatsby-remark-responsive-iframe`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-remark-external-links`,
           {
             resolve: 'gatsby-remark-emojis',
             options: {
-              // Deactivate the plugin globally (default: true)
               active: true,
-              // Add a custom css class
               class: 'emoji-icon',
-              // Select the size (available size: 16, 24, 32, 64)
               size: 64,
-              // Add custom styles
               styles: {
                 display: 'inline',
-                margin: '0',
-                'margin-top': '1px',
-                position: 'relative',
-                top: '5px',
-                width: '25px',
+                width: '22px',
+                'vertical-align': 'top',
               },
             },
           },

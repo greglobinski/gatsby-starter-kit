@@ -11,7 +11,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "@react-website-themes/default": "^0.0.14",
+    "@react-website-themes/classy-docs": "^0.0.14",
     "emotion": "^9.2.6",
     "emotion-server": "^9.2.6",
     "facepaint": "^1.2.1",
@@ -24,6 +24,7 @@
     "gatsby-plugin-resolve-src": "2.0.0-beta.1",
     "gatsby-plugin-sharp": "2.0.0-beta.7",
     "gatsby-plugin-sitemap": "2.0.0-beta.4",
+    "gatsby-remark-autolink-headers": "2.0.0-beta.5",
     "gatsby-remark-copy-linked-files": "2.0.0-beta.3",
     "gatsby-remark-emojis": "^0.2.3",
     "gatsby-remark-external-links": "^0.0.4",
