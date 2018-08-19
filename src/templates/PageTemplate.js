@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
+import '@react-website-themes/default/styles/variables';
+import '@react-website-themes/default/styles/global';
 
 import Article from '@react-website-themes/default/components/Article';
 import Bodytext from '@react-website-themes/default/components/Bodytext';

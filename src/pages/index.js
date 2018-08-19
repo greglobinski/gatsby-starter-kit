@@ -1,6 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import '@react-website-themes/default/styles/variables';
+import '@react-website-themes/default/styles/global';
+
 import Branding from '@react-website-themes/default/components/Branding';
 import Footer from '@react-website-themes/default/components/Footer';
 import Header from '@react-website-themes/default/components/Header';

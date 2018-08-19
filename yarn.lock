@@ -796,9 +796,9 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@react-website-themes/default@^0.0.14":
-  version "0.0.14"
-  resolved "https://registry.yarnpkg.com/@react-website-themes/default/-/default-0.0.14.tgz#c469c0407a44eabdb936837e22c5a0b05d5d84e5"
+"@react-website-themes/default@^0.0.16":
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/@react-website-themes/default/-/default-0.0.16.tgz#26b23ef77cc8bb1d15754f5d3320b1056fbf7782"
   dependencies:
     typeface-open-sans "^0.0.54"
 
