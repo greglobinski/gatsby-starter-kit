@@ -11,7 +11,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "@react-website-themes/classy-docs": "^0.0.14",
+    "@react-website-themes/classy-docs": "^0.0.18",
     "emotion": "^9.2.6",
     "emotion-server": "^9.2.6",
     "facepaint": "^1.2.1",
