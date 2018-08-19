@@ -147,9 +147,8 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         // create pages
-        const pages = items.filter(item =>
-          /pages/.test(item.node.fileAbsolutePath)
-        );
+        const pages = items.filter(item => item.node.fields.slug);
+
         pages.forEach(({ node }) => {
           const slug = node.fields.slug;
           const source = node.fields.source;
@@ -166,27 +165,4 @@ exports.createPages = ({ graphql, actions }) => {
       })
     );
   });
-};
-
-exports.onCreateWebpackConfig = ({
-  stage,
-  rules,
-  loaders,
-  plugins,
-  actions,
-}) => {
-  switch (stage) {
-    case 'build-javascript':
-      actions.setWebpackConfig({
-        module: {
-          rules: [
-            {
-              test: /\.yaml$/,
-              include: path.resolve('data'),
-              loader: 'yaml',
-            },
-          ],
-        },
-      });
-  }
 };
