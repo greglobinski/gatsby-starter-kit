@@ -1,6 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
+import '@react-website-themes/classy-docs/styles/variables';
+import '@react-website-themes/classy-docs/styles/global';
+
 import Article from '@react-website-themes/classy-docs/components/Article';
 import Branding from '@react-website-themes/classy-docs/components/Branding';
 import Footer from '@react-website-themes/classy-docs/components/Footer';
