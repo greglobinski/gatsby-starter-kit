@@ -1,33 +1,14 @@
 ---
-title: Minimal starter
-shortTitle: Minimal
+title: Nemo enim ipsam voluptatem
+shortTitle: Nemo enim
 categories: ['first']
 ---
 
-The **Minimal** starter is the simplest one in the set. Nothing fancy, just a bunch of React components plus a couple of Gatsby plugins.
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
 
-![gatsby-starter-kit-minimal](./gatsby-starter-kit-minimal.png)
+## Nemo enim ipsam
 
-<a class="demoLink" target="_blank"  href="https://gatsby-starter-kit-minimal.netlify.com">Live demo</a>
-
-## Features
-
-- A bunch of ready to use structural no-style **React components**.
-- Markdown **parts** files for editing content without touching Components' code.
-- Central **config** object.
-- Easy editable **menu**.
-- Feather **icons**.
-
-## Gatsby plugins
-
-- gatsby-plugin-catch-links
-- gatsby-plugin-resolve-src
-- gatsby-source-filesystem
-- gatsby-transformer-remark
-
-## Add-ons
-
-- react-feather
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
 
 ## Folder structure
 
@@ -56,34 +37,4 @@ root
           ├── Layout.js
           ├── MainMenu.js
           └── MainMenuItem.js
-```
-
-## Installation
-
-**Default usage**
-
-```shell
-gatsby new [NEW_DIRECTORY_FOR_YOUR_SITE] https://github.com/greglobinski/gatsby-starter-kit.git#minimal-with-content
-...
-cd [NEW_DIRECTORY_FOR_YOUR_SITE]
-...
-gatsby develop
-```
-
-**Advanced usage**
-
-Fork the [repository](https://github.com/greglobinski/gatsby-starter-kit).
-
-```shell
-git clone https://github.com/[your-github-name]/gatsby-starter-kit.git [NEW_DIRECTORY_FOR_YOUR_SITE]
-...
-cd [NEW_DIRECTORY_FOR_YOUR_SITE]
-...
-git checkout --track origin/minimal-with-content
-...
-git checkout -b my-minimal
-...
-yarn install
-...
-gatsby develop
 ```
