@@ -108,7 +108,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // create pages
         const pages = items.filter(item =>
-          /pages/.test(item.node.fileAbsolutePath)
+          /pages|docs/.test(item.node.fileAbsolutePath)
         );
         pages.forEach(({ node }) => {
           const slug = node.fields.slug;
