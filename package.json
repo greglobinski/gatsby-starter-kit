@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-base",
-  "description": "GatsbyJS base starter",
+  "name": "gatsby-starter-kit",
+  "description": "A set of starters for Gatsby.js v.2",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
