@@ -124,7 +124,7 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create posts
         const posts = items.filter(item => item =>
-          item.node.source === 'posts'
+          item.node.fields.source === 'posts'
         );
         posts.forEach(({ node }, index) => {
           const slug = node.fields.slug;
@@ -146,7 +146,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         // create pages
-        const pages = items.filter(item => item.node.source === 'pages');
+        const pages = items.filter(item => item.node.fields.source === 'pages');
         pages.forEach(({ node }) => {
           const slug = node.fields.slug;
           const source = node.fields.source;
