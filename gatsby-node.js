@@ -62,7 +62,6 @@ exports.createPages = ({ graphql, actions }) => {
         {
           allMarkdownRemark(
             filter: { fields: { slug: { ne: null } } }
-            sort: { fields: [fields___prefix], order: DESC }
             limit: 1000
           ) {
             edges {
@@ -107,9 +106,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         // create pages
-        const pages = items.filter(item => item.node.fields.slug);
-
-        pages.forEach(({ node }) => {
+        items.forEach(({ node }) => {
           const slug = node.fields.slug;
           const source = node.fields.source;
 
