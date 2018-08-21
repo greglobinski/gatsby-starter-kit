@@ -11,7 +11,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "@react-website-themes/default": "^0.0.16",
+    "@react-website-themes/default": "^0.0.17",
     "emotion": "^9.2.6",
     "emotion-server": "^9.2.6",
     "facepaint": "^1.2.1",
@@ -34,6 +34,7 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
+    "@babel/preset-flow": "^7.0.0-rc.1",
     "babel-eslint": "7.2.3",
     "dotenv": "^6.0.0",
     "eslint": "4.1.1",
