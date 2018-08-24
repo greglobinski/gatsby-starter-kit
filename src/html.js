@@ -8,13 +8,25 @@ export default class HTML extends React.Component {
         <head>
           <link
             rel="preload"
-            href="/static/open-sans-latin-700-d08c09f2f169f4a6edbcf8b8d1636cb4.woff2"
+            href="/static/merriweather-sans-latin-400-5c0dc789bed42bcd4688c7295c9c13d1.woff2"
             as="font"
             crossOrigin="anonymous"
           />
           <link
             rel="preload"
-            href="/static/open-sans-latin-400-cffb686d7d2f4682df8342bd4d276e09.woff2"
+            href="/static/merriweather-sans-latin-700-cb38f3b0e4214abd584ca618667c180e.woff2"
+            as="font"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/static/merriweather-sans-latin-300-edf94eee1dd358ce8817baa0563fb290.woff2"
+            as="font"
+            crossOrigin="anonymous"
+          />
+          <link
+            rel="preload"
+            href="/static/merriweather-sans-latin-400italic-c8eb5cc40aee890d92234b636f33841c.woff2"
             as="font"
             crossOrigin="anonymous"
           />
