@@ -123,9 +123,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         // Create posts
-        const posts = items.filter(item => item =>
-          item.node.fields.source === 'posts'
-        );
+        const posts = items.filter(item => item.node.fields.source === 'posts');
         posts.forEach(({ node }, index) => {
           const slug = node.fields.slug;
           const identifier = node.fields.identifier;
