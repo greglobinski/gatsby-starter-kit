@@ -3,21 +3,22 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
-import '@react-website-themes/default/styles/variables';
-import '@react-website-themes/default/styles/global';
+import '../../../../mynpms/react-website-themes/packages/diary/src/styles/variables';
+import '../../../../mynpms/react-website-themes/packages/diary/src/styles/global';
 
-import Article from '@react-website-themes/default/components/Article';
-import Bodytext from '@react-website-themes/default/components/Bodytext';
-import Branding from '@react-website-themes/default/components/Branding';
-import Footer from '@react-website-themes/default/components/Footer';
-import Header from '@react-website-themes/default/components/Header';
-import Heading from '@react-website-themes/default/components/Heading';
-import Layout from '@react-website-themes/default/components/Layout';
-import Menu from '@react-website-themes/default/components/Menu';
-import Seo from '@react-website-themes/default/components/Seo';
+import Article from '../../../../mynpms/react-website-themes/packages/diary/src/components/Article';
+import Bodytext from '../../../../mynpms/react-website-themes/packages/diary/src/components/Bodytext';
+import Branding from '../../../../mynpms/react-website-themes/packages/diary/src/components/Branding';
+import Footer from '../../../../mynpms/react-website-themes/packages/diary/src/components/Footer';
+import Header from '../../../../mynpms/react-website-themes/packages/diary/src/components/Header';
+import Heading from '../../../../mynpms/react-website-themes/packages/diary/src/components/Heading';
+import Layout from '../../../../mynpms/react-website-themes/packages/diary/src/components/Layout';
+import Menu from '../../../../mynpms/react-website-themes/packages/diary/src/components/Menu';
+import Seo from '../../../../mynpms/react-website-themes/packages/diary/src/components/Seo';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
+import logo from 'content/images/logo.png';
 
 const PageTemplate = props => {
   const {
@@ -45,7 +46,7 @@ const PageTemplate = props => {
   return (
     <Layout>
       <Header>
-        <Branding title={headerTitle} subTitle={headerSubTitle} />
+        <Branding title={headerTitle} subTitle={headerSubTitle} logo={logo} />
         <Menu items={menuItems} />
       </Header>
       <Article>

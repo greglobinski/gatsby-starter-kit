@@ -3,28 +3,28 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
-import '@react-website-themes/default/styles/variables';
-import '@react-website-themes/default/styles/global';
+import '../../../../mynpms/react-website-themes/packages/diary/src/styles/variables';
+import '../../../../mynpms/react-website-themes/packages/diary/src/styles/global';
 
-import { ShareButtonRectangle } from 'react-custom-share';
+import { ShareButtonIconOnly } from 'react-custom-share';
 
-import Article from '@react-website-themes/default/components/Article';
-import Author from '@react-website-themes/default/components/Author';
-import Branding from '@react-website-themes/default/components/Branding';
-import Bodytext from '@react-website-themes/default/components/Bodytext';
-import Comments from '@react-website-themes/default/components/Comments';
-import Footer from '@react-website-themes/default/components/Footer';
-import Header from '@react-website-themes/default/components/Header';
-import Heading from '@react-website-themes/default/components/Heading';
-import Layout from '@react-website-themes/default/components/Layout';
-import Menu from '@react-website-themes/default/components/Menu';
-import Meta from '@react-website-themes/default/components/Meta';
-import NextPrev from '@react-website-themes/default/components/NextPrev';
-import Seo from '@react-website-themes/default/components/Seo';
-import Share from '@react-website-themes/default/components/Share';
+import Article from '../../../../mynpms/react-website-themes/packages/diary/src/components/Article';
+import Branding from '../../../../mynpms/react-website-themes/packages/diary/src/components/Branding';
+import Bodytext from '../../../../mynpms/react-website-themes/packages/diary/src/components/Bodytext';
+import Comments from '../../../../mynpms/react-website-themes/packages/diary/src/components/Comments';
+import Footer from '../../../../mynpms/react-website-themes/packages/diary/src/components/Footer';
+import Header from '../../../../mynpms/react-website-themes/packages/diary/src/components/Header';
+import Heading from '../../../../mynpms/react-website-themes/packages/diary/src/components/Heading';
+import Layout from '../../../../mynpms/react-website-themes/packages/diary/src/components/Layout';
+import Menu from '../../../../mynpms/react-website-themes/packages/diary/src/components/Menu';
+import Meta from '../../../../mynpms/react-website-themes/packages/diary/src/components/Meta';
+import NextPrev from '../../../../mynpms/react-website-themes/packages/diary/src/components/NextPrev';
+import Seo from '../../../../mynpms/react-website-themes/packages/diary/src/components/Seo';
+import Share from '../../../../mynpms/react-website-themes/packages/diary/src/components/Share';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
+import logo from 'content/images/logo.png';
 
 import CalendarIcon from 'react-feather/dist/icons/calendar';
 import UserIcon from 'react-feather/dist/icons/user';
@@ -47,6 +47,7 @@ const nextPrevIcons = {
 };
 
 const PostTemplate = props => {
+  console.log(props);
   const {
     data: {
       post: {
@@ -55,7 +56,6 @@ const PostTemplate = props => {
         frontmatter: { title, categories },
         fields: { slug, prefix },
       },
-      author: { html: authorHTML },
       footerLinks: { html: footerLinksHTML },
       copyright: { html: copyrightHTML },
     },
@@ -66,7 +66,6 @@ const PostTemplate = props => {
     headerTitle,
     headerSubTitle,
     siteUrl,
-    siteTitle,
     siteLanguage,
     siteTitlePostfix,
   } = config;
@@ -74,7 +73,7 @@ const PostTemplate = props => {
   const url = siteUrl + slug;
   const shareBlockProps = {
     url: url,
-    button: ShareButtonRectangle,
+    button: ShareButtonIconOnly,
     buttons: [
       { network: 'Twitter', icon: TwitterIcon },
       { network: 'Facebook', icon: FacebookIcon },
@@ -87,7 +86,7 @@ const PostTemplate = props => {
   return (
     <Layout>
       <Header>
-        <Branding title={headerTitle} subTitle={headerSubTitle} />
+        <Branding title={headerTitle} subTitle={headerSubTitle} logo={logo} />
         <Menu items={menuItems} />
       </Header>
       <Article>
@@ -101,7 +100,6 @@ const PostTemplate = props => {
         <Bodytext html={postHTML} />
         <Share shareBlockProps={shareBlockProps} />
         <NextPrev next={next} prev={prev} icons={nextPrevIcons} />
-        <Author html={authorHTML} />
         <Comments slug={slug} siteUrl={siteUrl} />
       </Article>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />

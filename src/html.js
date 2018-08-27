@@ -6,7 +6,7 @@ export default class HTML extends React.Component {
     return (
       <html {...this.props.htmlAttributes}>
         <head>
-          <link
+          {/* <link
             rel="preload"
             href="/static/open-sans-latin-700-d08c09f2f169f4a6edbcf8b8d1636cb4.woff2"
             as="font"
@@ -17,7 +17,7 @@ export default class HTML extends React.Component {
             href="/static/open-sans-latin-400-cffb686d7d2f4682df8342bd4d276e09.woff2"
             as="font"
             crossOrigin="anonymous"
-          />
+          /> */}
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta

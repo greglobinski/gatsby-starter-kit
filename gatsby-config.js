@@ -29,6 +29,13 @@ module.exports = {
         path: `${__dirname}/src/content/pages/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `quotes`,
+        path: `${__dirname}/src/content/quotes/`,
+      },
+    },
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-sharp`,
@@ -36,6 +43,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
+        excerpt_separator: `<!-- end -->`,
         plugins: [
           {
             resolve: 'gatsby-remark-images',

@@ -32,7 +32,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       prefix = '';
     }
 
-    if (source !== 'parts') {
+    if (source !== 'parts' && source !== 'quotes') {
       createNodeField({
         node,
         name: `slug`,

@@ -4,18 +4,18 @@ import React from 'react';
 import TagIcon from 'react-feather/dist/icons/tag';
 
 import 'prismjs/themes/prism-okaidia.css';
-import '@react-website-themes/default/styles/variables';
-import '@react-website-themes/default/styles/global';
+import '../../../../mynpms/react-website-themes/packages/diary/src/styles/variables';
+import '../../../../mynpms/react-website-themes/packages/diary/src/styles/global';
 
-import Article from '@react-website-themes/default/components/Article';
-import Branding from '@react-website-themes/default/components/Branding';
-import Footer from '@react-website-themes/default/components/Footer';
-import Header from '@react-website-themes/default/components/Header';
-import Heading from '@react-website-themes/default/components/Heading';
-import Layout from '@react-website-themes/default/components/Layout';
-import List from '@react-website-themes/default/components/List';
-import Menu from '@react-website-themes/default/components/Menu';
-import Seo from '@react-website-themes/default/components/Seo';
+import Article from '../../../../mynpms/react-website-themes/packages/diary/src/components/Article';
+import Branding from '../../../../mynpms/react-website-themes/packages/diary/src/components/Branding';
+import Footer from '../../../../mynpms/react-website-themes/packages/diary/src/components/Footer';
+import Header from '../../../../mynpms/react-website-themes/packages/diary/src/components/Header';
+import Heading from '../../../../mynpms/react-website-themes/packages/diary/src/components/Heading';
+import Layout from '../../../../mynpms/react-website-themes/packages/diary/src/components/Layout';
+import List from '../../../../mynpms/react-website-themes/packages/diary/src/components/List';
+import Menu from '../../../../mynpms/react-website-themes/packages/diary/src/components/Menu';
+import Seo from '../../../../mynpms/react-website-themes/packages/diary/src/components/Seo';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
@@ -44,12 +44,13 @@ const PageTemplate = props => {
   return (
     <Layout>
       <Header>
-        <Branding title={headerTitle} subTitle={headerSubTitle} />
         <Menu items={menuItems} />
       </Header>
       <Article>
         <Heading>
-          <span>Posts in category</span> <TagIcon />
+          <span>
+            Posts in category <TagIcon />
+          </span>
           <h1>{category}</h1>
           <p className="meta">
             There {totalCount > 1 ? 'are' : 'is'} <strong>{totalCount}</strong>{' '}
@@ -89,6 +90,7 @@ export const query = graphql`
         node {
           fields {
             slug
+            prefix
           }
           excerpt
           timeToRead
