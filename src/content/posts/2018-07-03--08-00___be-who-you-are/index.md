@@ -1,7 +1,7 @@
 ---
 title: Be who you are and say what you feel
 subTitle: Because those who mind don't matter, and those who matter don't mind
-categories: ["sayings"]
+categories: ['sayings']
 cover: photo-1489824904134-891ab64532f1.jpg
 ---
 
