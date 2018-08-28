@@ -92,6 +92,7 @@ class IndexPage extends React.Component {
       siteTitle,
       siteDescription,
       siteLanguage,
+      timeOffset,
     } = config;
 
     return (
@@ -106,6 +107,7 @@ class IndexPage extends React.Component {
             author={'greg'}
             icons={blogIcons}
             lastVisit={lastVisit}
+            timeOffset={timeOffset}
           />
         </Article>
         <Footer links={footerLinksHTML} copyright={copyrightHTML} />
