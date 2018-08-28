@@ -800,11 +800,29 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
+"@react-website-themes/base@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@react-website-themes/base/-/base-0.0.3.tgz#0c11233b95c341425dd75580e360ea2c0cfacc2f"
+  dependencies:
+    typeface-open-sans "^0.0.54"
+
 "@react-website-themes/default@^0.0.17":
   version "0.0.17"
   resolved "https://registry.yarnpkg.com/@react-website-themes/default/-/default-0.0.17.tgz#e5599124c14e2d24ac2d635a27f8afbfac5749fa"
   dependencies:
     typeface-open-sans "^0.0.54"
+
+"@react-website-themes/diary@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@react-website-themes/diary/-/diary-0.0.4.tgz#34b49a2cc49b4852fd90c5861d9533519bf20b44"
+  dependencies:
+    "@react-website-themes/base" "^0.0.3"
+    dayjs "^1.7.5"
+    typeface-fredericka-the-great "^0.0.54"
+    typeface-merriweather "^0.0.54"
+    typeface-open-sans "^0.0.54"
+    typeface-pacifico "^0.0.54"
+    typeface-pt-serif "^0.0.54"
 
 "@types/configstore@^2.1.1":
   version "2.1.1"
@@ -11367,9 +11385,25 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
+typeface-fredericka-the-great@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-fredericka-the-great/-/typeface-fredericka-the-great-0.0.54.tgz#d39560102cd3c73761ea89012162f95e770e2a34"
+
+typeface-merriweather@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-merriweather/-/typeface-merriweather-0.0.54.tgz#a6b694d93c7ac432e26e8d7797a19afe83844186"
+
 typeface-open-sans@^0.0.54:
   version "0.0.54"
   resolved "https://registry.yarnpkg.com/typeface-open-sans/-/typeface-open-sans-0.0.54.tgz#20f5b5ea5c7f95d89dc1f8b2d2b1457680129cee"
+
+typeface-pacifico@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-pacifico/-/typeface-pacifico-0.0.54.tgz#fe133a690bdf066ad14213c18939dc6c4e5e51e6"
+
+typeface-pt-serif@^0.0.54:
+  version "0.0.54"
+  resolved "https://registry.yarnpkg.com/typeface-pt-serif/-/typeface-pt-serif-0.0.54.tgz#139269d821f44c675bd3713169808cfc51a07d9e"
 
 ua-parser-js@^0.7.18:
   version "0.7.18"

@@ -5,17 +5,17 @@ import TagIcon from 'react-feather/dist/icons/tag';
 import CalendarIcon from 'react-feather/dist/icons/calendar';
 
 import 'prismjs/themes/prism-okaidia.css';
-import '../../../../mynpms/react-website-themes/packages/diary/src/styles/variables';
-import '../../../../mynpms/react-website-themes/packages/diary/src/styles/global';
+import '@react-website-themes/diary/styles/variables';
+import '@react-website-themes/diary/styles/global';
 
-import Article from '../../../../mynpms/react-website-themes/packages/diary/src/components/Article';
-import Footer from '../../../../mynpms/react-website-themes/packages/diary/src/components/Footer';
-import Header from '../../../../mynpms/react-website-themes/packages/diary/src/components/Header';
-import Heading from '../../../../mynpms/react-website-themes/packages/diary/src/components/Heading';
-import Layout from '../../../../mynpms/react-website-themes/packages/diary/src/components/Layout';
-import List from '../../../../mynpms/react-website-themes/packages/diary/src/components/List';
-import Menu from '../../../../mynpms/react-website-themes/packages/diary/src/components/Menu';
-import Seo from '../../../../mynpms/react-website-themes/packages/diary/src/components/Seo';
+import Article from '@react-website-themes/diary/components/Article';
+import Footer from '@react-website-themes/diary/components/Footer';
+import Header from '@react-website-themes/diary/components/Header';
+import Heading from '@react-website-themes/diary/components/Heading';
+import Layout from '@react-website-themes/diary/components/Layout';
+import List from '@react-website-themes/diary/components/List';
+import Menu from '@react-website-themes/diary/components/Menu';
+import Seo from '@react-website-themes/diary/components/Seo';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
