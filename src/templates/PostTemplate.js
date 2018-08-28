@@ -47,7 +47,6 @@ const nextPrevIcons = {
 };
 
 const PostTemplate = props => {
-  console.log(props);
   const {
     data: {
       post: {
@@ -68,6 +67,7 @@ const PostTemplate = props => {
     siteUrl,
     siteLanguage,
     siteTitlePostfix,
+    timeOffset,
   } = config;
 
   const url = siteUrl + slug;
@@ -96,10 +96,16 @@ const PostTemplate = props => {
           prefix={prefix}
           categories={categories}
           icons={metaIcons}
+          timeOffset={timeOffset}
         />
         <Bodytext html={postHTML} />
         <Share shareBlockProps={shareBlockProps} />
-        <NextPrev next={next} prev={prev} icons={nextPrevIcons} />
+        <NextPrev
+          next={next}
+          prev={prev}
+          icons={nextPrevIcons}
+          timeOffset={timeOffset}
+        />
         <Comments slug={slug} siteUrl={siteUrl} />
       </Article>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />

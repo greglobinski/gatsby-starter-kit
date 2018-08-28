@@ -2,13 +2,13 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import TagIcon from 'react-feather/dist/icons/tag';
+import CalendarIcon from 'react-feather/dist/icons/calendar';
 
 import 'prismjs/themes/prism-okaidia.css';
 import '../../../../mynpms/react-website-themes/packages/diary/src/styles/variables';
 import '../../../../mynpms/react-website-themes/packages/diary/src/styles/global';
 
 import Article from '../../../../mynpms/react-website-themes/packages/diary/src/components/Article';
-import Branding from '../../../../mynpms/react-website-themes/packages/diary/src/components/Branding';
 import Footer from '../../../../mynpms/react-website-themes/packages/diary/src/components/Footer';
 import Header from '../../../../mynpms/react-website-themes/packages/diary/src/components/Header';
 import Heading from '../../../../mynpms/react-website-themes/packages/diary/src/components/Heading';
@@ -33,12 +33,11 @@ const PageTemplate = props => {
   const items = edges.map(edge => edge.node);
 
   const {
-    headerTitle,
-    headerSubTitle,
     siteUrl,
     siteDescription,
     siteLanguage,
     siteTitlePostfix,
+    timeOffset,
   } = config;
 
   return (
@@ -58,7 +57,7 @@ const PageTemplate = props => {
             {totalCount > 1 ? 's' : ''} in the category.
           </p>
         </Heading>
-        <List items={items} />
+        <List items={items} icon={CalendarIcon} timeOffset={timeOffset} />
       </Article>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
       <Seo
