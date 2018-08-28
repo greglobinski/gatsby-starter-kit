@@ -30,32 +30,31 @@ const blogIcons = {
 
 class IndexPage extends React.Component {
   state = {
-    lastVisit: null,
+    prevVisit: null,
   };
 
   componentDidMount() {
     if (typeof localStorage !== 'undefined') {
-      const lastVisit = localStorage.getItem('lastVisit');
-      const todayDate = dayjs().format('YYYY-MM-DD');
+      const lastVisitDay = localStorage.getItem('lastVisitDay');
+      const prevVisitDay = localStorage.getItem('prevVisitDay');
+      const todayDay = dayjs().format('YYYY-MM-DD');
 
-      if (!lastVisit) {
-        localStorage.setItem('lastVisit', todayDate);
-        this.setState({ lastVisit: todayDate });
+      if (!lastVisitDay) {
+        localStorage.setItem('lastVisitDay', todayDay);
       } else {
-        if (dayjs(lastVisit).diff(dayjs(todayDate)) > 0) {
-          localStorage.setItem('lastVisit', todayDate);
-          this.setState({ lastVisit: todayDate });
+        if (dayjs(todayDay).isAfter(dayjs(lastVisitDay))) {
+          localStorage.setItem('lastVisitDay', todayDay);
+          localStorage.setItem('prevVisitDay', lastVisitDay);
+          this.setState({ prevVisit: lastVisitDay });
         } else {
-          this.setState({ lastVisit: lastVisit });
+          this.setState({ prevVisit: prevVisitDay });
         }
       }
-
-      //console.log(localStorage.getItem('lastVisit'));
     }
   }
 
   render() {
-    const { lastVisit } = this.state;
+    const { prevVisit } = this.state;
 
     const {
       data: {
@@ -106,7 +105,7 @@ class IndexPage extends React.Component {
             items={items}
             author={'greg'}
             icons={blogIcons}
-            lastVisit={lastVisit}
+            prevVisit={prevVisit}
             timeOffset={timeOffset}
           />
         </Article>

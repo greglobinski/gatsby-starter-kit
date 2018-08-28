@@ -47,6 +47,7 @@ const nextPrevIcons = {
 };
 
 const PostTemplate = props => {
+  //console.log(props);
   const {
     data: {
       post: {
@@ -122,8 +123,6 @@ const PostTemplate = props => {
 PostTemplate.propTypes = {
   data: PropTypes.object.isRequired,
   pageContext: PropTypes.object.isRequired,
-  next: PropTypes.object,
-  prev: PropTypes.object,
 };
 
 export default PostTemplate;
