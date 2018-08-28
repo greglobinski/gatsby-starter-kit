@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@react-website-themes/default": "^0.0.17",
-    "@react-website-themes/diary": "^0.0.4",
+    "@react-website-themes/diary": "^0.0.5",
     "dayjs": "^1.7.5",
     "emotion": "^9.2.6",
     "emotion-server": "^9.2.6",
