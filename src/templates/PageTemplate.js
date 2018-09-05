@@ -3,22 +3,29 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
-import '@react-website-themes/diary/styles/variables';
-import '@react-website-themes/diary/styles/global';
+import '../../../../mynpms/react-website-themes/packages/diary/src/styles/variables';
+import '../../../../mynpms/react-website-themes/packages/diary/src/styles/global';
 
-import Article from '@react-website-themes/diary/components/Article';
-import Bodytext from '@react-website-themes/diary/components/Bodytext';
-import Branding from '@react-website-themes/diary/components/Branding';
-import Footer from '@react-website-themes/diary/components/Footer';
-import Header from '@react-website-themes/diary/components/Header';
-import Heading from '@react-website-themes/diary/components/Heading';
-import Layout from '@react-website-themes/diary/components/Layout';
-import Menu from '@react-website-themes/diary/components/Menu';
-import Seo from '@react-website-themes/diary/components/Seo';
+import Article from '../../../../mynpms/react-website-themes/packages/diary/src/components/Article';
+import Bodytext from '../../../../mynpms/react-website-themes/packages/diary/src/components/Bodytext';
+import Branding from '../../../../mynpms/react-website-themes/packages/diary/src/components/Branding';
+import Footer from '../../../../mynpms/react-website-themes/packages/diary/src/components/Footer';
+import Header from '../../../../mynpms/react-website-themes/packages/diary/src/components/Header';
+import Heading from '../../../../mynpms/react-website-themes/packages/diary/src/components/Heading';
+import Layout from '../../../../mynpms/react-website-themes/packages/diary/src/components/Layout';
+import Menu from '../../../../mynpms/react-website-themes/packages/diary/src/components/Menu';
+import Seo from '../../../../mynpms/react-website-themes/packages/diary/src/components/Seo';
+
+import ArrowUpIcon from 'react-feather/dist/icons/arrow-up';
+import CalendarIcon from 'react-feather/dist/icons/calendar';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
 import logo from 'content/images/logo.png';
+
+const actionIcons = {
+  toTop: ArrowUpIcon,
+};
 
 const PageTemplate = props => {
   const {
@@ -38,7 +45,6 @@ const PageTemplate = props => {
     headerTitle,
     headerSubTitle,
     siteUrl,
-    siteTitle,
     siteLanguage,
     siteTitlePostfix,
   } = config;
@@ -47,7 +53,7 @@ const PageTemplate = props => {
     <Layout>
       <Header>
         <Branding title={headerTitle} subTitle={headerSubTitle} logo={logo} />
-        <Menu items={menuItems} />
+        <Menu items={menuItems} actionIcons={actionIcons} />
       </Header>
       <Article>
         <Heading title={title} />

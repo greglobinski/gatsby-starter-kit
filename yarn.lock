@@ -808,7 +808,7 @@
 
 "@react-website-themes/diary@^0.0.6":
   version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@react-website-themes/diary/-/diary-0.0.6.tgz#a32d0655b8524b6c143ee8ae7871822fee6c86e6"
+  resolved "https://registry.yarnpkg.com/../../../../mynpms/react-website-themes/packages/diary/src/-/diary-0.0.6.tgz#a32d0655b8524b6c143ee8ae7871822fee6c86e6"
   dependencies:
     "@react-website-themes/base" "^0.0.3"
     dayjs "^1.7.5"
@@ -3302,6 +3302,10 @@ data-urls@^1.0.0:
     abab "^1.0.4"
     whatwg-mimetype "^2.0.0"
     whatwg-url "^6.4.0"
+
+date-fns@^1.29.0:
+  version "1.29.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.29.0.tgz#12e609cdcb935127311d04d33334e2960a2a54e6"
 
 date-now@^0.1.4:
   version "0.1.4"
