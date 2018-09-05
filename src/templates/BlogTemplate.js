@@ -41,7 +41,7 @@ const paginationIcons = {
   last: SkipForwardIcon,
 };
 
-class IndexPage extends React.Component {
+class BlogTemplate extends React.Component {
   state = {
     prevVisit: null,
   };
@@ -67,6 +67,7 @@ class IndexPage extends React.Component {
   }
 
   render() {
+    //console.log(this.props);
     const { prevVisit } = this.state;
 
     const {
@@ -118,7 +119,7 @@ class IndexPage extends React.Component {
   }
 }
 
-export default IndexPage;
+export default BlogTemplate;
 
 export const query = graphql`
   query {
