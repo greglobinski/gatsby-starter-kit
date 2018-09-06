@@ -32,7 +32,6 @@ const blogIcons = {
 };
 
 const actionIcons = {
-  calendar: CalendarIcon,
   toTop: ArrowUpIcon,
 };
 
