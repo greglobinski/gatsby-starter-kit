@@ -11,7 +11,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "@react-website-themes/diary": "^0.0.7",
+    "@react-website-themes/diary": "^0.0.8",
     "date-fns": "^1.29.0",
     "dayjs": "^1.7.5",
     "emotion": "^9.2.6",
