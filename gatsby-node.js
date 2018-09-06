@@ -4,7 +4,7 @@ const Promise = require('bluebird');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 const SLUG_SEPARATOR = '___';
-const ITEMS_PER_PAGE = 2;
+const ITEMS_PER_PAGE = 5;
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
@@ -159,7 +159,6 @@ exports.createPages = ({ graphql, actions }) => {
             component: postTemplate,
             context: {
               slug,
-              //identifier,
               prev,
               next,
             },
@@ -183,6 +182,7 @@ exports.createPages = ({ graphql, actions }) => {
         });
 
         /* Create Blog pages*/
+
         const blogItems = [...posts, ...quotes];
 
         const unifiedPrefixBlogItems = blogItems.map(item => {

@@ -68,6 +68,8 @@ class IndexPage extends React.Component {
   render() {
     const { prevVisit } = this.state;
 
+    console.log(this.props);
+
     const {
       pageContext: { items, pageIndex, numberOfPages },
       data: {
@@ -100,11 +102,13 @@ class IndexPage extends React.Component {
           location={city}
           limit={10}
         />
-        <Pagination
-          pageIndex={pageIndex}
-          numberOfPages={numberOfPages}
-          icons={paginationIcons}
-        />
+        {numberOfPages > 1 && (
+          <Pagination
+            pageIndex={pageIndex}
+            numberOfPages={numberOfPages}
+            icons={paginationIcons}
+          />
+        )}
         <Footer links={footerLinksHTML} copyright={copyrightHTML} />
         <Seo
           url={siteUrl}
