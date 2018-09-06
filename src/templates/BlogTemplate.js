@@ -2,8 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import dayjs from 'dayjs';
 
-import '../../../../mynpms/react-website-themes/packages/diary/src/styles/variables';
-import '../../../../mynpms/react-website-themes/packages/diary/src/styles/global';
+import '@react-website-themes/diary/styles/variables';
+import '@react-website-themes/diary/styles/global';
 
 import HomeIcon from 'react-feather/dist/icons/home';
 import CalendarIcon from 'react-feather/dist/icons/calendar';
@@ -12,14 +12,14 @@ import ClockIcon from 'react-feather/dist/icons/clock';
 import ArrowUpIcon from 'react-feather/dist/icons/arrow-up';
 import SkipForwardIcon from 'react-feather/dist/icons/skip-forward';
 
-import Branding from '../../../../mynpms/react-website-themes/packages/diary/src/components/Branding';
-import Footer from '../../../../mynpms/react-website-themes/packages/diary/src/components/Footer';
-import Header from '../../../../mynpms/react-website-themes/packages/diary/src/components/Header';
-import Menu from '../../../../mynpms/react-website-themes/packages/diary/src/components/Menu';
-import Blog from '../../../../mynpms/react-website-themes/packages/diary/src/components/Blog';
-import Layout from '../../../../mynpms/react-website-themes/packages/diary/src/components/Layout';
-import Seo from '../../../../mynpms/react-website-themes/packages/diary/src/components/Seo';
-import Pagination from '../../../../mynpms/react-website-themes/packages/diary/src/components/Pagination';
+import Branding from '@react-website-themes/diary/components/Branding';
+import Footer from '@react-website-themes/diary/components/Footer';
+import Header from '@react-website-themes/diary/components/Header';
+import Menu from '@react-website-themes/diary/components/Menu';
+import Blog from '@react-website-themes/diary/components/Blog';
+import Layout from '@react-website-themes/diary/components/Layout';
+import Seo from '@react-website-themes/diary/components/Seo';
+import Pagination from '@react-website-themes/diary/components/Pagination';
 
 import config from 'content/meta/config';
 import logo from 'content/images/logo.png';
@@ -32,7 +32,6 @@ const blogIcons = {
 };
 
 const actionIcons = {
-  calendar: CalendarIcon,
   toTop: ArrowUpIcon,
 };
 

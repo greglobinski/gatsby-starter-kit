@@ -3,24 +3,24 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
-import '../../../../mynpms/react-website-themes/packages/diary/src/styles/variables';
-import '../../../../mynpms/react-website-themes/packages/diary/src/styles/global';
+import '@react-website-themes/diary/styles/variables';
+import '@react-website-themes/diary/styles/global';
 
 import { ShareButtonIconOnly } from 'react-custom-share';
 
-import Article from '../../../../mynpms/react-website-themes/packages/diary/src/components/Article';
-import Branding from '../../../../mynpms/react-website-themes/packages/diary/src/components/Branding';
-import Bodytext from '../../../../mynpms/react-website-themes/packages/diary/src/components/Bodytext';
-import Comments from '../../../../mynpms/react-website-themes/packages/diary/src/components/Comments';
-import Footer from '../../../../mynpms/react-website-themes/packages/diary/src/components/Footer';
-import Header from '../../../../mynpms/react-website-themes/packages/diary/src/components/Header';
-import Heading from '../../../../mynpms/react-website-themes/packages/diary/src/components/Heading';
-import Layout from '../../../../mynpms/react-website-themes/packages/diary/src/components/Layout';
-import Menu from '../../../../mynpms/react-website-themes/packages/diary/src/components/Menu';
-import Meta from '../../../../mynpms/react-website-themes/packages/diary/src/components/Meta';
-import NextPrev from '../../../../mynpms/react-website-themes/packages/diary/src/components/NextPrev';
-import Seo from '../../../../mynpms/react-website-themes/packages/diary/src/components/Seo';
-import Share from '../../../../mynpms/react-website-themes/packages/diary/src/components/Share';
+import Article from '@react-website-themes/diary/components/Article';
+import Branding from '@react-website-themes/diary/components/Branding';
+import Bodytext from '@react-website-themes/diary/components/Bodytext';
+import Comments from '@react-website-themes/diary/components/Comments';
+import Footer from '@react-website-themes/diary/components/Footer';
+import Header from '@react-website-themes/diary/components/Header';
+import Heading from '@react-website-themes/diary/components/Heading';
+import Layout from '@react-website-themes/diary/components/Layout';
+import Menu from '@react-website-themes/diary/components/Menu';
+import Meta from '@react-website-themes/diary/components/Meta';
+import NextPrev from '@react-website-themes/diary/components/NextPrev';
+import Seo from '@react-website-themes/diary/components/Seo';
+import Share from '@react-website-themes/diary/components/Share';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
