@@ -806,9 +806,9 @@
   dependencies:
     typeface-open-sans "^0.0.54"
 
-"@react-website-themes/diary@^0.0.8":
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/@react-website-themes/diary/-/diary-0.0.8.tgz#340bb2b5541c2b99e5e9246fd8a1f067a940c403"
+"@react-website-themes/diary@^0.0.9":
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/@react-website-themes/diary/-/diary-0.0.9.tgz#cd2f222fe9f700928444c4e15f8a1ea026f22a9f"
   dependencies:
     "@react-website-themes/base" "^0.0.4"
     dayjs "^1.7.5"
