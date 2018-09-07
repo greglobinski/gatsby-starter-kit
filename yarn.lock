@@ -661,6 +661,12 @@
     core-js "^2.5.7"
     regenerator-runtime "^0.12.0"
 
+"@babel/runtime@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0.tgz#adeb78fedfc855aa05bc041640f3f6f98e85424c"
+  dependencies:
+    regenerator-runtime "^0.12.0"
+
 "@babel/template@7.0.0-beta.44":
   version "7.0.0-beta.44"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.0.0-beta.44.tgz#f8832f4fdcee5d59bf515e595fc5106c529b394f"
@@ -808,7 +814,7 @@
 
 "@react-website-themes/diary@^0.0.9":
   version "0.0.9"
-  resolved "https://registry.yarnpkg.com/@react-website-themes/diary/-/diary-0.0.9.tgz#cd2f222fe9f700928444c4e15f8a1ea026f22a9f"
+  resolved "https://registry.yarnpkg.com/../../../../mynpms/react-website-themes/packages/side-nav/src/-/diary-0.0.9.tgz#cd2f222fe9f700928444c4e15f8a1ea026f22a9f"
   dependencies:
     "@react-website-themes/base" "^0.0.4"
     dayjs "^1.7.5"
@@ -5044,6 +5050,12 @@ gatsby-plugin-google-analytics@2.0.0-rc.0:
   resolved "https://registry.yarnpkg.com/gatsby-plugin-google-analytics/-/gatsby-plugin-google-analytics-2.0.0-rc.0.tgz#3ba16c9a0cd39eaa768281665bca7f5a2ced4eb5"
   dependencies:
     "@babel/runtime" "7.0.0-beta.52"
+
+gatsby-plugin-layout@^1.0.0-rc.3:
+  version "1.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-layout/-/gatsby-plugin-layout-1.0.0-rc.3.tgz#dbae328391c2161ed696276583f2323be1c20ebf"
+  dependencies:
+    "@babel/runtime" "^7.0.0"
 
 gatsby-plugin-page-creator@^2.0.0-rc.0:
   version "2.0.0-rc.0"

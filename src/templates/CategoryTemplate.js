@@ -3,18 +3,18 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
-import '@react-website-themes/diary/styles/variables';
-import '@react-website-themes/diary/styles/global';
+import '../../../../mynpms/react-website-themes/packages/side-nav/src/styles/variables';
+import '../../../../mynpms/react-website-themes/packages/side-nav/src/styles/global';
 
-import Article from '@react-website-themes/diary/components/Article';
-import Branding from '@react-website-themes/diary/components/Branding';
-import Footer from '@react-website-themes/diary/components/Footer';
-import Header from '@react-website-themes/diary/components/Header';
-import Heading from '@react-website-themes/diary/components/Heading';
-import Layout from '@react-website-themes/diary/components/Layout';
-import List from '@react-website-themes/diary/components/List';
-import Menu from '@react-website-themes/diary/components/Menu';
-import Seo from '@react-website-themes/diary/components/Seo';
+import Article from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Article';
+import Branding from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Branding';
+import Footer from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Footer';
+import Header from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Header';
+import Heading from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Heading';
+import Layout from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Layout';
+import List from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/List';
+import Menu from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Menu';
+import Seo from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Seo';
 
 import TagIcon from 'react-feather/dist/icons/tag';
 import ArrowUpIcon from 'react-feather/dist/icons/arrow-up';
