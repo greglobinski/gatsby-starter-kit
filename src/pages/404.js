@@ -1,18 +1,14 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import '@react-website-themes/diary/styles/variables';
-import '@react-website-themes/diary/styles/global';
-
-import Article from '@react-website-themes/diary/components/Article';
-import Bodytext from '@react-website-themes/diary/components/Bodytext';
-import Branding from '@react-website-themes/diary/components/Branding';
-import Footer from '@react-website-themes/diary/components/Footer';
-import Header from '@react-website-themes/diary/components/Header';
-import Heading from '@react-website-themes/diary/components/Heading';
-import Layout from '@react-website-themes/diary/components/Layout';
-import Menu from '@react-website-themes/diary/components/Menu';
-import Seo from '@react-website-themes/diary/components/Seo';
+import Article from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Article';
+import Bodytext from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Bodytext';
+import Branding from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Branding';
+import Footer from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Footer';
+import Header from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Header';
+import Heading from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Heading';
+import Menu from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Menu';
+import Seo from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Seo';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
@@ -37,11 +33,7 @@ const NotFoundPage = props => {
   } = config;
 
   return (
-    <Layout>
-      <Header>
-        <Branding title={headerTitle} subTitle={headerSubTitle} logo={logo} />
-        <Menu items={menuItems} />
-      </Header>
+    <React.Fragment>
       <Article>
         <Heading title="NOT FOUND" />
         <Bodytext html={notFoundHTML} />
@@ -53,7 +45,7 @@ const NotFoundPage = props => {
         title={siteTitle}
         description={siteDescription}
       />
-    </Layout>
+    </React.Fragment>
   );
 };
 

@@ -3,24 +3,21 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
-import '@react-website-themes/diary/styles/variables';
-import '@react-website-themes/diary/styles/global';
 
 import { ShareButtonIconOnly } from 'react-custom-share';
 
-import Article from '@react-website-themes/diary/components/Article';
-import Branding from '@react-website-themes/diary/components/Branding';
-import Bodytext from '@react-website-themes/diary/components/Bodytext';
-import Comments from '@react-website-themes/diary/components/Comments';
-import Footer from '@react-website-themes/diary/components/Footer';
-import Header from '@react-website-themes/diary/components/Header';
-import Heading from '@react-website-themes/diary/components/Heading';
-import Layout from '@react-website-themes/diary/components/Layout';
-import Menu from '@react-website-themes/diary/components/Menu';
-import Meta from '@react-website-themes/diary/components/Meta';
-import NextPrev from '@react-website-themes/diary/components/NextPrev';
-import Seo from '@react-website-themes/diary/components/Seo';
-import Share from '@react-website-themes/diary/components/Share';
+import Article from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Article';
+import Branding from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Branding';
+import Bodytext from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Bodytext';
+import Comments from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Comments';
+import Footer from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Footer';
+import Header from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Header';
+import Heading from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Heading';
+import Menu from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Menu';
+import Meta from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Meta';
+import NextPrev from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/NextPrev';
+import Seo from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Seo';
+import Share from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Share';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
@@ -90,11 +87,7 @@ const PostTemplate = props => {
   };
 
   return (
-    <Layout>
-      <Header>
-        <Branding title={headerTitle} subTitle={headerSubTitle} logo={logo} />
-        <Menu items={menuItems} actionIcons={actionIcons} />
-      </Header>
+    <React.Fragment>
       <Article>
         <Heading title={title} />
         <Meta
@@ -125,7 +118,7 @@ const PostTemplate = props => {
         title={`${title}${siteTitlePostfix}`}
         description={excerpt}
       />
-    </Layout>
+    </React.Fragment>
   );
 };
 
