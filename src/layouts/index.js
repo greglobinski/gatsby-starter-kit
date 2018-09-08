@@ -8,11 +8,19 @@ import Layout from '../../../../mynpms/react-website-themes/packages/side-nav/sr
 import Sidebar from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Sidebar';
 
 import CalendarIcon from 'react-feather/dist/icons/calendar';
+import ListIcon from 'react-feather/dist/icons/list';
+import SearchIcon from 'react-feather/dist/icons/search';
+import TagIcon from 'react-feather/dist/icons/tag';
+import FolderIcon from 'react-feather/dist/icons/folder';
 
 import config from 'content/meta/config';
 
 const sidebarIcons = {
   calendar: CalendarIcon,
+  category: FolderIcon,
+  list: ListIcon,
+  search: SearchIcon,
+  tag: TagIcon,
 };
 
 class LayoutWrapper extends React.Component {
