@@ -4,26 +4,22 @@ import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
 
-import { ShareButtonIconOnly } from 'react-custom-share';
+import { ShareButtonRectangle } from 'react-custom-share';
 
 import Article from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Article';
-import Branding from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Branding';
 import Bodytext from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Bodytext';
 import Comments from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Comments';
 import Footer from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Footer';
-import Header from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Header';
 import Heading from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Heading';
-import Menu from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Menu';
 import Meta from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Meta';
 import NextPrev from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/NextPrev';
 import Seo from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Seo';
 import Share from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Share';
 
 import config from 'content/meta/config';
-import menuItems from 'content/meta/menu';
-import logo from 'content/images/logo.png';
 
 import CalendarIcon from 'react-feather/dist/icons/calendar';
+import FolderIcon from 'react-feather/dist/icons/folder';
 import UserIcon from 'react-feather/dist/icons/user';
 import TagIcon from 'react-feather/dist/icons/tag';
 import PrevIcon from 'react-feather/dist/icons/arrow-left';
@@ -31,16 +27,12 @@ import NextIcon from 'react-feather/dist/icons/arrow-right';
 import FacebookIcon from 'react-feather/dist/icons/facebook';
 import TwitterIcon from 'react-feather/dist/icons/twitter';
 import EmailIcon from 'react-feather/dist/icons/mail';
-import ArrowUpIcon from 'react-feather/dist/icons/arrow-up';
 
 const metaIcons = {
   calendar: CalendarIcon,
+  folder: FolderIcon,
   user: UserIcon,
   tag: TagIcon,
-};
-
-const actionIcons = {
-  toTop: ArrowUpIcon,
 };
 
 const nextPrevIcons = {
@@ -49,13 +41,12 @@ const nextPrevIcons = {
 };
 
 const PostTemplate = props => {
-  //console.log(props);
   const {
     data: {
       post: {
         excerpt,
         html: postHTML,
-        frontmatter: { title, categories },
+        frontmatter: { title, categories, tags },
         fields: { slug, prefix },
       },
       footerLinks: { html: footerLinksHTML },
@@ -64,19 +55,12 @@ const PostTemplate = props => {
     pageContext: { next, prev },
   } = props;
 
-  const {
-    headerTitle,
-    headerSubTitle,
-    siteUrl,
-    siteLanguage,
-    siteTitlePostfix,
-    timeOffset,
-  } = config;
+  const { siteUrl, siteLanguage, siteTitlePostfix, timeOffset } = config;
 
   const url = siteUrl + slug;
   const shareBlockProps = {
     url: url,
-    button: ShareButtonIconOnly,
+    button: ShareButtonRectangle,
     buttons: [
       { network: 'Twitter', icon: TwitterIcon },
       { network: 'Facebook', icon: FacebookIcon },
@@ -94,6 +78,7 @@ const PostTemplate = props => {
           author="greg"
           prefix={prefix}
           categories={categories}
+          tags={tags}
           icons={metaIcons}
           timeOffset={timeOffset}
         />
@@ -142,6 +127,7 @@ export const query = graphql`
       frontmatter {
         title
         categories
+        tags
       }
     }
     author: markdownRemark(

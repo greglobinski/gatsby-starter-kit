@@ -6,12 +6,16 @@ import '../../../../mynpms/react-website-themes/packages/side-nav/src/styles/glo
 
 import Layout from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Layout';
 import Sidebar from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Sidebar';
+import prefixToDateTimeString from '../../../../mynpms/react-website-themes/packages/side-nav/src/utils/prefixToDateTimeString';
 
 import CalendarIcon from 'react-feather/dist/icons/calendar';
 import ListIcon from 'react-feather/dist/icons/list';
 import SearchIcon from 'react-feather/dist/icons/search';
 import TagIcon from 'react-feather/dist/icons/tag';
 import FolderIcon from 'react-feather/dist/icons/folder';
+import HomeIcon from 'react-feather/dist/icons/home';
+import CloseIcon from 'react-feather/dist/icons/x';
+import ArrowRightIcon from 'react-feather/dist/icons/arrow-right';
 
 import config from 'content/meta/config';
 
@@ -21,6 +25,9 @@ const sidebarIcons = {
   list: ListIcon,
   search: SearchIcon,
   tag: TagIcon,
+  home: HomeIcon,
+  close: CloseIcon,
+  arrow: ArrowRightIcon,
 };
 
 class LayoutWrapper extends React.Component {
@@ -47,6 +54,7 @@ class LayoutWrapper extends React.Component {
                   frontmatter {
                     title
                     categories
+                    tags
                   }
                 }
               }
@@ -61,23 +69,25 @@ class LayoutWrapper extends React.Component {
           const posts = rawPosts.map(item => {
             const {
               node: {
-                fields: { slug, prefix: date },
-                frontmatter: { title, categories },
+                fields: { slug, prefix },
+                frontmatter: { title, categories, tags },
               },
             } = item;
 
-            return { title, slug, date, categories };
+            const date = prefixToDateTimeString(prefix);
+
+            return { title, slug, date, categories, tags };
           });
 
           return (
             <Layout>
-              <main>{this.props.children}</main>
               <Sidebar
                 posts={posts}
                 title={headerTitle}
                 subTitle={headerSubTitle}
                 icons={sidebarIcons}
               />
+              <main>{this.props.children}</main>
             </Layout>
           );
         }}

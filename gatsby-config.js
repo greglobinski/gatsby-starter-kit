@@ -53,15 +53,18 @@ module.exports = {
           {
             resolve: 'gatsby-remark-images',
             options: {
-              maxWidth: 690,
+              maxWidth: 1023,
               linkImagesToOriginal: false,
               backgroundColor: 'transparent',
+              withWebp: true,
+              showCaptions: true,
             },
           },
           `gatsby-remark-prismjs`,
           `gatsby-remark-responsive-iframe`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
+          `gatsby-remark-unwrap-images`,
           {
             resolve: 'gatsby-remark-emojis',
             options: {
@@ -146,6 +149,13 @@ module.exports = {
             output: '/rss.xml',
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `tomato`,
       },
     },
   ],
