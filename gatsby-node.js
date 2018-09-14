@@ -1,10 +1,8 @@
-const _ = require('lodash');
 const path = require('path');
 const Promise = require('bluebird');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 const SLUG_SEPARATOR = '___';
-const ITEMS_PER_PAGE = 5;
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions;
@@ -52,18 +50,12 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 };
 
-const dataForHomePage = {};
-
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions;
 
   return new Promise((resolve, reject) => {
     const postTemplate = path.resolve('./src/templates/PostTemplate.js');
     const pageTemplate = path.resolve('./src/templates/PageTemplate.js');
-    const blogTemplate = path.resolve('./src/templates/BlogTemplate.js');
-    const categoryTemplate = path.resolve(
-      './src/templates/CategoryTemplate.js'
-    );
 
     resolve(
       graphql(`
@@ -114,36 +106,6 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         const items = result.data.allMarkdownRemark.edges;
-        const quotes = result.data.quotes.edges;
-
-        const categorySet = new Set();
-
-        /* Create Category list */
-        items.forEach(edge => {
-          const {
-            node: {
-              frontmatter: { categories },
-            },
-          } = edge;
-
-          if (categories) {
-            categories.forEach(category => {
-              categorySet.add(category);
-            });
-          }
-        });
-
-        /* Create Category Pages */
-        const categoryList = Array.from(categorySet);
-        categoryList.forEach(category => {
-          createPage({
-            path: `/categories/${_.kebabCase(category)}/`,
-            component: categoryTemplate,
-            context: {
-              category,
-            },
-          });
-        });
 
         /* Create Posts */
         const posts = items.filter(item => item.node.fields.source === 'posts');
@@ -180,67 +142,7 @@ exports.createPages = ({ graphql, actions }) => {
             },
           });
         });
-
-        /* Create Blog pages*/
-
-        const blogItems = [...posts, ...quotes];
-
-        const unifiedPrefixBlogItems = blogItems.map(item => {
-          if (!/--/.test(item.node.fields.prefix)) {
-            item.node.fields.prefix = item.node.fields.prefix + '--00-00';
-          }
-          return item.node;
-        });
-
-        unifiedPrefixBlogItems.sort((a, b) => {
-          return a.fields.prefix < b.fields.prefix ? 1 : -1;
-        });
-
-        const groupedBlogItems = unifiedPrefixBlogItems
-          .map((item, index) => {
-            return index % ITEMS_PER_PAGE === 0
-              ? unifiedPrefixBlogItems.slice(index, index + ITEMS_PER_PAGE)
-              : null;
-          })
-          .filter(item => item);
-
-        groupedBlogItems.forEach((group, index) => {
-          if (index === 0) {
-            dataForHomePage.items = group;
-            dataForHomePage.pageIndex = 0;
-            dataForHomePage.numberOfPages = groupedBlogItems.length;
-          }
-
-          if (index > 0) {
-            createPage({
-              path: `/page-${index + 1}`,
-              component: blogTemplate,
-              context: {
-                items: group,
-                pageIndex: index,
-                numberOfPages: groupedBlogItems.length,
-              },
-            });
-          }
-        });
       })
     );
-  });
-};
-
-exports.onCreatePage = ({ page, actions }) => {
-  const { createPage, deletePage } = actions;
-  return new Promise(resolve => {
-    const oldPage = Object.assign({}, page);
-
-    page.context.items = dataForHomePage.items;
-    page.context.pageIndex = dataForHomePage.pageIndex;
-    page.context.numberOfPages = dataForHomePage.numberOfPages;
-
-    if (page.path === '/') {
-      deletePage(oldPage);
-      createPage(page);
-    }
-    resolve();
   });
 };

@@ -3,16 +3,11 @@ import { graphql } from 'gatsby';
 
 import Article from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Article';
 import Bodytext from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Bodytext';
-import Branding from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Branding';
 import Footer from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Footer';
-import Header from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Header';
 import Heading from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Heading';
-import Menu from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Menu';
 import Seo from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Seo';
 
 import config from 'content/meta/config';
-import menuItems from 'content/meta/menu';
-import logo from 'content/images/logo.png';
 
 const NotFoundPage = props => {
   const {
@@ -23,14 +18,7 @@ const NotFoundPage = props => {
     },
   } = props;
 
-  const {
-    headerTitle,
-    headerSubTitle,
-    siteUrl,
-    siteTitle,
-    siteDescription,
-    siteLanguage,
-  } = config;
+  const { siteUrl, siteTitle, siteDescription, siteLanguage } = config;
 
   return (
     <React.Fragment>
