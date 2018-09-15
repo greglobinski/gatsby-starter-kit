@@ -1,12 +1,12 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 
-import '../../../../mynpms/react-website-themes/packages/side-nav/src/styles/variables';
-import '../../../../mynpms/react-website-themes/packages/side-nav/src/styles/global';
+import '../../../../mynpms/react-website-themes/packages/side-blog/src/styles/variables';
+import '../../../../mynpms/react-website-themes/packages/side-blog/src/styles/global';
 
-import Layout from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Layout';
-import Sidebar from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Sidebar';
-import prefixToDateTimeString from '../../../../mynpms/react-website-themes/packages/side-nav/src/utils/prefixToDateTimeString';
+import Layout from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Layout';
+import Sidebar from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Sidebar';
+import prefixToDateTimeString from '../../../../mynpms/react-website-themes/packages/side-blog/src/utils/prefixToDateTimeString';
 
 import CalendarIcon from 'react-feather/dist/icons/calendar';
 import ListIcon from 'react-feather/dist/icons/list';
@@ -16,6 +16,7 @@ import FolderIcon from 'react-feather/dist/icons/folder';
 import HomeIcon from 'react-feather/dist/icons/home';
 import CloseIcon from 'react-feather/dist/icons/x';
 import ArrowRightIcon from 'react-feather/dist/icons/arrow-right';
+import CheckIcon from 'react-feather/dist/icons/check';
 
 import config from 'content/meta/config';
 
@@ -28,6 +29,7 @@ const sidebarIcons = {
   home: HomeIcon,
   close: CloseIcon,
   arrow: ArrowRightIcon,
+  check: CheckIcon,
 };
 
 class LayoutWrapper extends React.Component {

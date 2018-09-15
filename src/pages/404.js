@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Article from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Article';
-import Bodytext from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Bodytext';
-import Footer from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Footer';
-import Heading from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Heading';
-import Seo from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Seo';
+import Article from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Article';
+import Bodytext from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Bodytext';
+import Footer from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Footer';
+import Heading from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Heading';
+import Seo from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Seo';
 
 import config from 'content/meta/config';
 
