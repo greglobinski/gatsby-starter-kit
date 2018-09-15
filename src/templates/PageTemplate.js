@@ -2,16 +2,12 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import 'prismjs/themes/prism-okaidia.css';
-import '../../../../mynpms/react-website-themes/packages/side-blog/src/styles/variables';
-import '../../../../mynpms/react-website-themes/packages/side-blog/src/styles/global';
-
 import Article from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Article';
 import Bodytext from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Bodytext';
 import Footer from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Footer';
 import Heading from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Heading';
-import Layout from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Layout';
 import Seo from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Seo';
+
 import config from 'content/meta/config';
 
 const PageTemplate = props => {
@@ -31,7 +27,7 @@ const PageTemplate = props => {
   const { siteUrl, siteLanguage, siteTitlePostfix } = config;
 
   return (
-    <Layout>
+    <React.Fragment>
       <Article>
         <Heading title={title} />
         <Bodytext html={pageHTML} />
@@ -43,7 +39,7 @@ const PageTemplate = props => {
         title={`${title}${siteTitlePostfix}`}
         description={excerpt}
       />
-    </Layout>
+    </React.Fragment>
   );
 };
 
