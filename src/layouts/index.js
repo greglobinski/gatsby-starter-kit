@@ -16,6 +16,7 @@ import FolderIcon from 'react-feather/dist/icons/folder';
 import HomeIcon from 'react-feather/dist/icons/home';
 import CloseIcon from 'react-feather/dist/icons/x';
 import ArrowRightIcon from 'react-feather/dist/icons/arrow-right';
+import CheckIcon from 'react-feather/dist/icons/check';
 
 import config from 'content/meta/config';
 
@@ -28,6 +29,7 @@ const sidebarIcons = {
   home: HomeIcon,
   close: CloseIcon,
   arrow: ArrowRightIcon,
+  check: CheckIcon,
 };
 
 class LayoutWrapper extends React.Component {
