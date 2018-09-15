@@ -52,7 +52,6 @@ const nextPrevIcons = {
 };
 
 const PostTemplate = props => {
-  //console.log(props);
   const {
     data: {
       post: {
