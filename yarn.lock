@@ -814,7 +814,7 @@
 
 "@react-website-themes/diary@^0.0.9":
   version "0.0.9"
-  resolved "https://registry.yarnpkg.com/../../../../mynpms/react-website-themes/packages/side-nav/src/-/diary-0.0.9.tgz#cd2f222fe9f700928444c4e15f8a1ea026f22a9f"
+  resolved "https://registry.yarnpkg.com/../../../../mynpms/react-website-themes/packages/side-blog/src/-/diary-0.0.9.tgz#cd2f222fe9f700928444c4e15f8a1ea026f22a9f"
   dependencies:
     "@react-website-themes/base" "^0.0.4"
     dayjs "^1.7.5"

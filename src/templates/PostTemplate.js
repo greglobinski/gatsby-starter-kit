@@ -6,15 +6,15 @@ import 'prismjs/themes/prism-okaidia.css';
 
 import { ShareButtonRectangle } from 'react-custom-share';
 
-import Article from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Article';
-import Bodytext from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Bodytext';
-import Comments from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Comments';
-import Footer from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Footer';
-import Heading from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Heading';
-import Meta from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Meta';
-import NextPrev from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/NextPrev';
-import Seo from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Seo';
-import Share from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Share';
+import Article from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Article';
+import Bodytext from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Bodytext';
+import Comments from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Comments';
+import Footer from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Footer';
+import Heading from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Heading';
+import Meta from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Meta';
+import NextPrev from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/NextPrev';
+import Seo from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Seo';
+import Share from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Share';
 
 import config from 'content/meta/config';
 

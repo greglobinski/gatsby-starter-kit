@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
-import '../../../../mynpms/react-website-themes/packages/side-nav/src/styles/variables';
-import '../../../../mynpms/react-website-themes/packages/side-nav/src/styles/global';
+import '../../../../mynpms/react-website-themes/packages/side-blog/src/styles/variables';
+import '../../../../mynpms/react-website-themes/packages/side-blog/src/styles/global';
 
-import Article from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Article';
-import Bodytext from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Bodytext';
-import Footer from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Footer';
-import Heading from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Heading';
-import Layout from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Layout';
-import Seo from '../../../../mynpms/react-website-themes/packages/side-nav/src/components/Seo';
+import Article from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Article';
+import Bodytext from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Bodytext';
+import Footer from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Footer';
+import Heading from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Heading';
+import Layout from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Layout';
+import Seo from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Seo';
 import config from 'content/meta/config';
 
 const PageTemplate = props => {
