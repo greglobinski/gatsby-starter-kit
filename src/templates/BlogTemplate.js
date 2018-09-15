@@ -66,7 +66,6 @@ class BlogTemplate extends React.Component {
   }
 
   render() {
-    //console.log(this.props);
     const { prevVisit } = this.state;
 
     const {

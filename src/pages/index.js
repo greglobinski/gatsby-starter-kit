@@ -68,8 +68,6 @@ class IndexPage extends React.Component {
   render() {
     const { prevVisit } = this.state;
 
-    console.log(this.props);
-
     const {
       pageContext: { items, pageIndex, numberOfPages },
       data: {
