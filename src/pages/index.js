@@ -2,8 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import dayjs from 'dayjs';
 
-import '@react-website-themes/diary/styles/variables';
-import '@react-website-themes/diary/styles/global';
+import '@react-website-themes/clean-diary/styles/variables';
+import '@react-website-themes/clean-diary/styles/global';
 
 import HomeIcon from 'react-feather/dist/icons/home';
 import CalendarIcon from 'react-feather/dist/icons/calendar';
@@ -12,14 +12,14 @@ import ClockIcon from 'react-feather/dist/icons/clock';
 import ArrowUpIcon from 'react-feather/dist/icons/arrow-up';
 import SkipForwardIcon from 'react-feather/dist/icons/skip-forward';
 
-import Branding from '@react-website-themes/diary/components/Branding';
-import Footer from '@react-website-themes/diary/components/Footer';
-import Header from '@react-website-themes/diary/components/Header';
-import Menu from '@react-website-themes/diary/components/Menu';
-import Blog from '@react-website-themes/diary/components/Blog';
-import Layout from '@react-website-themes/diary/components/Layout';
-import Seo from '@react-website-themes/diary/components/Seo';
-import Pagination from '@react-website-themes/diary/components/Pagination';
+import Branding from '@react-website-themes/clean-diary/components/Branding';
+import Footer from '@react-website-themes/clean-diary/components/Footer';
+import Header from '@react-website-themes/clean-diary/components/Header';
+import Menu from '@react-website-themes/clean-diary/components/Menu';
+import Blog from '@react-website-themes/clean-diary/components/Blog';
+import Layout from '@react-website-themes/clean-diary/components/Layout';
+import Seo from '@react-website-themes/clean-diary/components/Seo';
+import Pagination from '@react-website-themes/clean-diary/components/Pagination';
 
 import config from 'content/meta/config';
 import logo from 'content/images/logo.png';
