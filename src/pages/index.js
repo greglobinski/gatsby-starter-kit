@@ -12,7 +12,7 @@ import config from 'content/meta/config';
 const IndexPage = props => {
   const {
     data: {
-      hero: { html: heroHTML },
+      home: { html: homeHTML },
       footerLinks: { html: footerLinksHTML },
       copyright: { html: copyrightHTML },
     },
@@ -34,7 +34,7 @@ const IndexPage = props => {
               })
             }
           >
-            <Bodytext html={heroHTML} />
+            <Bodytext html={homeHTML} />
           </Article>
         )}
       </ContextConsumer>
@@ -53,7 +53,7 @@ export default IndexPage;
 
 export const query = graphql`
   query {
-    hero: markdownRemark(fileAbsolutePath: { regex: "/content/parts/hero/" }) {
+    home: markdownRemark(fileAbsolutePath: { regex: "/content/parts/home/" }) {
       html
     }
     footerLinks: markdownRemark(
