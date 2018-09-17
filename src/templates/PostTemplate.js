@@ -6,17 +6,17 @@ import 'prismjs/themes/prism-okaidia.css';
 
 import { ShareButtonRectangle } from 'react-custom-share';
 
-import Article from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Article';
-import Author from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Author';
-import Bodytext from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Bodytext';
-import Comments from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Comments';
-import Footer from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Footer';
-import Heading from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Heading';
-import Meta from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Meta';
-import NextPrev from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/NextPrev';
-import Seo from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Seo';
-import Share from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Share';
-import ContextConsumer from '../../../../mynpms/react-website-themes/packages/side-blog/src/store/Context';
+import Article from '@react-website-themes/side-blog/components/Article';
+import Author from '@react-website-themes/side-blog/components/Author';
+import Bodytext from '@react-website-themes/side-blog/components/Bodytext';
+import Comments from '@react-website-themes/side-blog/components/Comments';
+import Footer from '@react-website-themes/side-blog/components/Footer';
+import Heading from '@react-website-themes/side-blog/components/Heading';
+import Meta from '@react-website-themes/side-blog/components/Meta';
+import NextPrev from '@react-website-themes/side-blog/components/NextPrev';
+import Seo from '@react-website-themes/side-blog/components/Seo';
+import Share from '@react-website-themes/side-blog/components/Share';
+import ContextConsumer from '@react-website-themes/side-blog/store/Context';
 
 import config from 'content/meta/config';
 import avatar from 'content/images/avatar.png';

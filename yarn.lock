@@ -806,25 +806,21 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@reach/skip-nav@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@reach/skip-nav/-/skip-nav-0.1.1.tgz#25c7390f0e4c5eb1b37cef569ca6ceedec9fb149"
-
-"@react-website-themes/base@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@react-website-themes/base/-/base-0.0.4.tgz#69bc9368017827551cc3b05799e555840b7995e7"
+"@react-website-themes/base@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@react-website-themes/base/-/base-0.0.6.tgz#25fa12b8b4679f7476697122790f7e12da65f292"
   dependencies:
     typeface-open-sans "^0.0.54"
 
-"@react-website-themes/diary@^0.0.9":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/../../../../mynpms/react-website-themes/packages/side-blog/src/-/diary-0.0.9.tgz#cd2f222fe9f700928444c4e15f8a1ea026f22a9f"
+"@react-website-themes/side-blog@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@react-website-themes/side-blog/-/side-blog-0.0.3.tgz#de8eed136883a1488fae41dd2ac463cf85351995"
   dependencies:
-    "@react-website-themes/base" "^0.0.4"
+    "@react-website-themes/base" "^0.0.6"
     dayjs "^1.7.5"
     typeface-fredericka-the-great "^0.0.54"
     typeface-merriweather "^0.0.54"
-    typeface-open-sans "^0.0.54"
+    typeface-open-sans "^0.0.54"@react-website-themes/side-blog/
     typeface-pacifico "^0.0.54"
     typeface-pt-serif "^0.0.54"
 

@@ -1,16 +1,16 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 
-import '../../../../mynpms/react-website-themes/packages/side-blog/src/styles/variables';
-import '../../../../mynpms/react-website-themes/packages/side-blog/src/styles/global';
+import '@react-website-themes/side-blog/styles/variables';
+import '@react-website-themes/side-blog/styles/global';
 
-import Layout from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Layout';
-import Sidebar from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Sidebar';
-import ToTop from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/ToTop';
-import prefixToDateTimeString from '../../../../mynpms/react-website-themes/packages/side-blog/src/utils/prefixToDateTimeString';
+import Layout from '@react-website-themes/side-blog/components/Layout';
+import Sidebar from '@react-website-themes/side-blog/components/Sidebar';
+import ToTop from '@react-website-themes/side-blog/components/ToTop';
+import prefixToDateTimeString from '@react-website-themes/side-blog/utils/prefixToDateTimeString';
 import ContextConsumer, {
   ContextProviderComponent,
-} from '../../../../mynpms/react-website-themes/packages/side-blog/src/store/Context';
+} from '@react-website-themes/side-blog/store/Context';
 
 import CalendarIcon from 'react-feather/dist/icons/calendar';
 import ListIcon from 'react-feather/dist/icons/list';

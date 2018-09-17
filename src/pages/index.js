@@ -1,11 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Article from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Article';
-import Bodytext from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Bodytext';
-import Footer from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Footer';
-import Seo from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Seo';
-import ContextConsumer from '../../../../mynpms/react-website-themes/packages/side-blog/src/store/Context';
+import Article from '@react-website-themes/side-blog/components/Article';
+import Bodytext from '@react-website-themes/side-blog/components/Bodytext';
+import Footer from '@react-website-themes/side-blog/components/Footer';
+import Seo from '@react-website-themes/side-blog/components/Seo';
+import ContextConsumer from '@react-website-themes/side-blog/store/Context';
 
 import config from 'content/meta/config';
 
