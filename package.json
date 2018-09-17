@@ -11,7 +11,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "@react-website-themes/side-blog": "^0.0.3",
+    "@react-website-themes/side-blog": "^0.0.4",
     "date-fns": "^1.29.0",
     "dayjs": "^1.7.5",
     "emotion": "^9.2.6",
@@ -19,6 +19,7 @@
     "facepaint": "^1.2.1",
     "gatsby": "2.0.0-rc.0",
     "gatsby-image": "2.0.0-beta.7",
+    "gatsby-link": "2.0.0-rc.0",
     "gatsby-plugin-catch-links": "2.0.2-rc.0",
     "gatsby-plugin-emotion": "2.0.0-rc.0",
     "gatsby-plugin-feed": "2.0.0-rc.0",
