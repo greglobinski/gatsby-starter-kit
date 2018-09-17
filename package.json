@@ -11,7 +11,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "@react-website-themes/diary": "^0.0.9",
+    "@react-website-themes/side-blog": "^0.0.3",
     "date-fns": "^1.29.0",
     "dayjs": "^1.7.5",
     "emotion": "^9.2.6",
@@ -48,7 +48,8 @@
     "react-emotion": "^9.2.6",
     "react-facebook": "^5.0.3",
     "react-feather": "^1.1.1",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-transition-group": "^2.4.0"
   },
   "devDependencies": {
     "@babel/preset-flow": "^7.0.0-rc.1",

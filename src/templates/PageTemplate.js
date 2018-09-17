@@ -2,16 +2,13 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import 'prismjs/themes/prism-okaidia.css';
-import '../../../../mynpms/react-website-themes/packages/side-blog/src/styles/variables';
-import '../../../../mynpms/react-website-themes/packages/side-blog/src/styles/global';
+import Article from '@react-website-themes/side-blog/components/Article';
+import Bodytext from '@react-website-themes/side-blog/components/Bodytext';
+import Footer from '@react-website-themes/side-blog/components/Footer';
+import Heading from '@react-website-themes/side-blog/components/Heading';
+import Seo from '@react-website-themes/side-blog/components/Seo';
+import ContextConsumer from '@react-website-themes/side-blog/store/Context';
 
-import Article from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Article';
-import Bodytext from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Bodytext';
-import Footer from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Footer';
-import Heading from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Heading';
-import Layout from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Layout';
-import Seo from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Seo';
 import config from 'content/meta/config';
 
 const PageTemplate = props => {
@@ -26,16 +23,29 @@ const PageTemplate = props => {
       footerLinks: { html: footerLinksHTML },
       copyright: { html: copyrightHTML },
     },
+    location,
   } = props;
 
   const { siteUrl, siteLanguage, siteTitlePostfix } = config;
 
   return (
-    <Layout>
-      <Article>
-        <Heading title={title} />
-        <Bodytext html={pageHTML} />
-      </Article>
+    <React.Fragment>
+      <ContextConsumer>
+        {({ data, set }) => (
+          <Article
+            location={location}
+            articleRendered={data.articleRendered}
+            updateArticleRendered={val =>
+              set({
+                articleRendered: val,
+              })
+            }
+          >
+            <Heading title={title} />
+            <Bodytext html={pageHTML} />
+          </Article>
+        )}
+      </ContextConsumer>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
       <Seo
         url={`${siteUrl}${slug}`}
@@ -43,7 +53,7 @@ const PageTemplate = props => {
         title={`${title}${siteTitlePostfix}`}
         description={excerpt}
       />
-    </Layout>
+    </React.Fragment>
   );
 };
 

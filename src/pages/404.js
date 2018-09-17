@@ -1,11 +1,12 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Article from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Article';
-import Bodytext from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Bodytext';
-import Footer from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Footer';
-import Heading from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Heading';
-import Seo from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Seo';
+import Article from '@react-website-themes/side-blog/components/Article';
+import Bodytext from '@react-website-themes/side-blog/components/Bodytext';
+import Footer from '@react-website-themes/side-blog/components/Footer';
+import Heading from '@react-website-themes/side-blog/components/Heading';
+import Seo from '@react-website-themes/side-blog/components/Seo';
+import ContextConsumer from '@react-website-themes/side-blog/store/Context';
 
 import config from 'content/meta/config';
 
@@ -16,16 +17,29 @@ const NotFoundPage = props => {
       footerLinks: { html: footerLinksHTML },
       copyright: { html: copyrightHTML },
     },
+    location,
   } = props;
 
   const { siteUrl, siteTitle, siteDescription, siteLanguage } = config;
 
   return (
     <React.Fragment>
-      <Article>
-        <Heading title="NOT FOUND" />
-        <Bodytext html={notFoundHTML} />
-      </Article>
+      <ContextConsumer>
+        {({ data, set }) => (
+          <Article
+            location={location}
+            articleRendered={data.articleRendered}
+            updateArticleRendered={val =>
+              set({
+                articleRendered: val,
+              })
+            }
+          >
+            <Heading title="NOT FOUND" />
+            <Bodytext html={notFoundHTML} />
+          </Article>
+        )}
+      </ContextConsumer>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
       <Seo
         url={siteUrl}
