@@ -5,6 +5,7 @@ import Article from '../../../../mynpms/react-website-themes/packages/side-blog/
 import Bodytext from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Bodytext';
 import Footer from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Footer';
 import Seo from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Seo';
+import ContextConsumer from '../../../../mynpms/react-website-themes/packages/side-blog/src/store/Context';
 
 import config from 'content/meta/config';
 
@@ -15,15 +16,28 @@ const IndexPage = props => {
       footerLinks: { html: footerLinksHTML },
       copyright: { html: copyrightHTML },
     },
+    location,
   } = props;
 
-  const { siteUrl, siteLanguage, siteTitle, siteDescription, city } = config;
+  const { siteUrl, siteLanguage, siteTitle, siteDescription } = config;
 
   return (
     <React.Fragment>
-      <Article>
-        <Bodytext html={heroHTML} />
-      </Article>
+      <ContextConsumer>
+        {({ data, set }) => (
+          <Article
+            location={location}
+            articleRendered={data.articleRendered}
+            updateArticleRendered={val =>
+              set({
+                articleRendered: val,
+              })
+            }
+          >
+            <Bodytext html={heroHTML} />
+          </Article>
+        )}
+      </ContextConsumer>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
       <Seo
         url={siteUrl}

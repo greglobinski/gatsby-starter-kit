@@ -42,6 +42,13 @@ module.exports = {
         path: `${__dirname}/src/content/quotes/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/content/images/`,
+      },
+    },
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-sharp`,

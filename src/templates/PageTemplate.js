@@ -7,6 +7,7 @@ import Bodytext from '../../../../mynpms/react-website-themes/packages/side-blog
 import Footer from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Footer';
 import Heading from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Heading';
 import Seo from '../../../../mynpms/react-website-themes/packages/side-blog/src/components/Seo';
+import ContextConsumer from '../../../../mynpms/react-website-themes/packages/side-blog/src/store/Context';
 
 import config from 'content/meta/config';
 
@@ -22,16 +23,29 @@ const PageTemplate = props => {
       footerLinks: { html: footerLinksHTML },
       copyright: { html: copyrightHTML },
     },
+    location,
   } = props;
 
   const { siteUrl, siteLanguage, siteTitlePostfix } = config;
 
   return (
     <React.Fragment>
-      <Article>
-        <Heading title={title} />
-        <Bodytext html={pageHTML} />
-      </Article>
+      <ContextConsumer>
+        {({ data, set }) => (
+          <Article
+            location={location}
+            articleRendered={data.articleRendered}
+            updateArticleRendered={val =>
+              set({
+                articleRendered: val,
+              })
+            }
+          >
+            <Heading title={title} />
+            <Bodytext html={pageHTML} />
+          </Article>
+        )}
+      </ContextConsumer>
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
       <Seo
         url={`${siteUrl}${slug}`}
