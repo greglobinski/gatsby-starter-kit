@@ -30,7 +30,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       prefix = '';
     }
 
-    if (source !== 'parts' && source !== 'quotes') {
+    if (source !== 'parts') {
       createNodeField({
         node,
         name: `slug`,
@@ -78,23 +78,6 @@ exports.createPages = ({ graphql, actions }) => {
                   categories
                 }
                 timeToRead
-              }
-            }
-          }
-          quotes: allMarkdownRemark(
-            filter: { fields: { source: { eq: "quotes" } } }
-          ) {
-            edges {
-              node {
-                html
-                frontmatter {
-                  cite
-                  author
-                }
-                fields {
-                  prefix
-                  source
-                }
               }
             }
           }
