@@ -21,8 +21,8 @@ const config = {
   siteUrl: base.url,
   // pathPrefix: '',
 
-  /* time */
-  timeOffset: '+00:00',
+  // author
+  authorName: 'greg lobinski',
 };
 
 module.exports = config;
