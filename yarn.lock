@@ -800,17 +800,17 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@react-website-themes/base@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@react-website-themes/base/-/base-0.0.4.tgz#69bc9368017827551cc3b05799e555840b7995e7"
+"@react-website-themes/base@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@react-website-themes/base/-/base-0.0.6.tgz#25fa12b8b4679f7476697122790f7e12da65f292"
   dependencies:
     typeface-open-sans "^0.0.54"
 
-"@react-website-themes/diary@^0.0.9":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/@react-website-themes/diary/-/diary-0.0.9.tgz#cd2f222fe9f700928444c4e15f8a1ea026f22a9f"
+"@react-website-themes/clean-diary@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@react-website-themes/clean-diary/-/clean-diary-0.0.2.tgz#53c43f3486b51e811557523eea01b8b975669a1a"
   dependencies:
-    "@react-website-themes/base" "^0.0.4"
+    "@react-website-themes/base" "^0.0.6"
     dayjs "^1.7.5"
     typeface-fredericka-the-great "^0.0.54"
     typeface-merriweather "^0.0.54"

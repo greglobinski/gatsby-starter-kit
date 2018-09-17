@@ -3,24 +3,24 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import 'prismjs/themes/prism-okaidia.css';
-import '@react-website-themes/diary/styles/variables';
-import '@react-website-themes/diary/styles/global';
+import '@react-website-themes/clean-diary/styles/variables';
+import '@react-website-themes/clean-diary/styles/global';
 
 import { ShareButtonIconOnly } from 'react-custom-share';
 
-import Article from '@react-website-themes/diary/components/Article';
-import Branding from '@react-website-themes/diary/components/Branding';
-import Bodytext from '@react-website-themes/diary/components/Bodytext';
-import Comments from '@react-website-themes/diary/components/Comments';
-import Footer from '@react-website-themes/diary/components/Footer';
-import Header from '@react-website-themes/diary/components/Header';
-import Heading from '@react-website-themes/diary/components/Heading';
-import Layout from '@react-website-themes/diary/components/Layout';
-import Menu from '@react-website-themes/diary/components/Menu';
-import Meta from '@react-website-themes/diary/components/Meta';
-import NextPrev from '@react-website-themes/diary/components/NextPrev';
-import Seo from '@react-website-themes/diary/components/Seo';
-import Share from '@react-website-themes/diary/components/Share';
+import Article from '@react-website-themes/clean-diary/components/Article';
+import Branding from '@react-website-themes/clean-diary/components/Branding';
+import Bodytext from '@react-website-themes/clean-diary/components/Bodytext';
+import Comments from '@react-website-themes/clean-diary/components/Comments';
+import Footer from '@react-website-themes/clean-diary/components/Footer';
+import Header from '@react-website-themes/clean-diary/components/Header';
+import Heading from '@react-website-themes/clean-diary/components/Heading';
+import Layout from '@react-website-themes/clean-diary/components/Layout';
+import Menu from '@react-website-themes/clean-diary/components/Menu';
+import Meta from '@react-website-themes/clean-diary/components/Meta';
+import NextPrev from '@react-website-themes/clean-diary/components/NextPrev';
+import Seo from '@react-website-themes/clean-diary/components/Seo';
+import Share from '@react-website-themes/clean-diary/components/Share';
 
 import config from 'content/meta/config';
 import menuItems from 'content/meta/menu';
