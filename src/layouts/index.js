@@ -70,7 +70,6 @@ const LayoutWrapper = props => {
           allMarkdownRemark: { edges: rawPosts },
         } = data;
 
-        console.log('props', props);
         const posts = rawPosts.map(item => {
           const {
             node: {
