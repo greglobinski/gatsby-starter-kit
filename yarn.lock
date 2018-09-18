@@ -815,16 +815,12 @@
   dependencies:
     typeface-open-sans "^0.0.54"
 
-"@react-website-themes/side-blog@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@react-website-themes/side-blog/-/side-blog-0.0.4.tgz#1919496d73962e0a906e9e1babfcd1cbe2145717"
+"@react-website-themes/side-blog@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@react-website-themes/side-blog/-/side-blog-0.0.5.tgz#cb893a102cc511d98545dde38b7cadb927c1ce41"
   dependencies:
     "@react-website-themes/base" "^0.0.6"
-    dayjs "^1.7.5"
-    typeface-fredericka-the-great "^0.0.54"
-    typeface-merriweather "^0.0.54"
     typeface-open-sans "^0.0.54"
-    typeface-pacifico "^0.0.54"
     typeface-pt-serif "^0.0.54"
 
 "@types/configstore@^2.1.1":
@@ -11487,21 +11483,9 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typeface-fredericka-the-great@^0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-fredericka-the-great/-/typeface-fredericka-the-great-0.0.54.tgz#d39560102cd3c73761ea89012162f95e770e2a34"
-
-typeface-merriweather@^0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-merriweather/-/typeface-merriweather-0.0.54.tgz#a6b694d93c7ac432e26e8d7797a19afe83844186"
-
 typeface-open-sans@^0.0.54:
   version "0.0.54"
   resolved "https://registry.yarnpkg.com/typeface-open-sans/-/typeface-open-sans-0.0.54.tgz#20f5b5ea5c7f95d89dc1f8b2d2b1457680129cee"
-
-typeface-pacifico@^0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-pacifico/-/typeface-pacifico-0.0.54.tgz#fe133a690bdf066ad14213c18939dc6c4e5e51e6"
 
 typeface-pt-serif@^0.0.54:
   version "0.0.54"
