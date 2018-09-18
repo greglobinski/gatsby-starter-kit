@@ -64,7 +64,6 @@ module.exports = {
           `gatsby-remark-responsive-iframe`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
-          `gatsby-remark-unwrap-images`,
           {
             resolve: 'gatsby-remark-emojis',
             options: {
