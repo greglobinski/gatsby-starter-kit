@@ -30,7 +30,13 @@ const IndexPage = props => {
     location,
   } = props;
 
-  const { siteUrl, siteLanguage, siteTitle, siteDescription } = config;
+  const {
+    siteUrl,
+    siteLanguage,
+    siteTitle,
+    siteDescription,
+    siteImage,
+  } = config;
 
   return (
     <React.Fragment>
@@ -57,6 +63,7 @@ const IndexPage = props => {
         language={siteLanguage}
         title={siteTitle}
         description={siteDescription}
+        image={siteImage}
       />
     </React.Fragment>
   );
