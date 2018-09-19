@@ -794,9 +794,9 @@
   dependencies:
     typeface-open-sans "^0.0.54"
 
-"@react-website-themes/side-blog@^0.0.5":
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/@react-website-themes/side-blog/-/side-blog-0.0.5.tgz#cb893a102cc511d98545dde38b7cadb927c1ce41"
+"@react-website-themes/side-blog@0.0.8":
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/@react-website-themes/side-blog/-/side-blog-0.0.8.tgz#65ecb1260a041345e6e2ba2bccf42fd093e8a273"
   dependencies:
     "@react-website-themes/base" "^0.0.6"
     typeface-open-sans "^0.0.54"
@@ -3278,10 +3278,6 @@ date-now@^0.1.4:
 dateformat@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/dateformat/-/dateformat-2.2.0.tgz#4065e2013cf9fb916ddfd82efb506ad4c6769062"
-
-dayjs@^1.7.5:
-  version "1.7.5"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.7.5.tgz#14715cb565d1f8cb556a8531cb14bf1fc33067cc"
 
 death@^1.0.0:
   version "1.1.0"

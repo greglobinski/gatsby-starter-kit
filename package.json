@@ -11,9 +11,8 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "@react-website-themes/side-blog": "^0.0.5",
+    "@react-website-themes/side-blog": "0.0.8",
     "date-fns": "^1.29.0",
-    "dayjs": "^1.7.5",
     "emotion": "^9.2.9",
     "emotion-server": "^9.2.9",
     "facepaint": "^1.2.1",
