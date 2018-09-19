@@ -1,6 +1,6 @@
 const base = {
   name: 'Gatsby Starter Kit',
-  url: 'https://github.com/greglobinski/gatsby-starter-kit',
+  url: 'https://github.com/greglobinski/gatsby-starter-kit'
 };
 
 const config = {
@@ -19,11 +19,11 @@ const config = {
 
   /* url */
   siteUrl: base.url,
-  sitePreviewImage: preview.png
+  sitePreviewImage: preview.png,
   // pathPrefix: '',
 
   // author
-  authorName: 'greg lobinski',
+  authorName: 'greg lobinski'
 };
 
 module.exports = config;
