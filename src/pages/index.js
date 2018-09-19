@@ -22,7 +22,7 @@ const IndexPage = props => {
     data: {
       home: {
         html: homeHTML,
-        frontmatter: { title },
+        frontmatter: { title, preTitle, subTitle },
       },
       footerLinks: { html: footerLinksHTML },
       copyright: { html: copyrightHTML },
