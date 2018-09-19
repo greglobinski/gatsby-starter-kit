@@ -19,6 +19,7 @@ const config = {
 
   /* url */
   siteUrl: base.url,
+  sitePreviewImage: preview.png
   // pathPrefix: '',
 
   // author
