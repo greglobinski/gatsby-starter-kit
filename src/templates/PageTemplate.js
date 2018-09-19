@@ -26,7 +26,7 @@ const PageTemplate = props => {
     location,
   } = props;
 
-  const { siteUrl, siteLanguage, siteTitlePostfix } = config;
+  const { siteUrl, siteLanguage, siteTitlePostfix, siteImage } = config;
 
   return (
     <React.Fragment>
@@ -52,6 +52,7 @@ const PageTemplate = props => {
         language={siteLanguage}
         title={`${title}${siteTitlePostfix}`}
         description={excerpt}
+        image={siteImage}
       />
     </React.Fragment>
   );

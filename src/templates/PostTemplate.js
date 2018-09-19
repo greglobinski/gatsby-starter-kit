@@ -15,6 +15,7 @@ import Heading from '@react-website-themes/side-blog/components/Heading';
 import Meta from '@react-website-themes/side-blog/components/Meta';
 import NextPrev from '@react-website-themes/side-blog/components/NextPrev';
 import Seo from '@react-website-themes/side-blog/components/Seo';
+
 import Share from '@react-website-themes/side-blog/components/Share';
 import ContextConsumer from '@react-website-themes/side-blog/store/Context';
 
@@ -61,7 +62,13 @@ const PostTemplate = props => {
     location,
   } = props;
 
-  const { siteUrl, siteLanguage, siteTitlePostfix, authorName } = config;
+  const {
+    siteUrl,
+    siteLanguage,
+    siteTitlePostfix,
+    authorName,
+    siteImage,
+  } = config;
 
   const url = siteUrl + slug;
   const shareBlockProps = {
@@ -116,6 +123,7 @@ const PostTemplate = props => {
         language={siteLanguage}
         title={`${title}${siteTitlePostfix}`}
         description={excerpt}
+        image={siteImage}
       />
     </React.Fragment>
   );

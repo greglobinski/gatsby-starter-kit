@@ -20,7 +20,13 @@ const NotFoundPage = props => {
     location,
   } = props;
 
-  const { siteUrl, siteTitle, siteDescription, siteLanguage } = config;
+  const {
+    siteUrl,
+    siteTitle,
+    siteDescription,
+    siteLanguage,
+    siteImage,
+  } = config;
 
   return (
     <React.Fragment>
@@ -46,6 +52,7 @@ const NotFoundPage = props => {
         language={siteLanguage}
         title={siteTitle}
         description={siteDescription}
+        image={siteImage}
       />
     </React.Fragment>
   );

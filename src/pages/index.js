@@ -30,7 +30,13 @@ const IndexPage = props => {
     location,
   } = props;
 
-  const { siteUrl, siteLanguage, siteTitle, siteDescription } = config;
+  const {
+    siteUrl,
+    siteLanguage,
+    siteTitle,
+    siteDescription,
+    siteImage,
+  } = config;
 
   return (
     <React.Fragment>
@@ -45,8 +51,14 @@ const IndexPage = props => {
               })
             }
           >
-            <img src={logo} alt={siteTitle} className={logoStyle} />
-            <Heading title={title} home={true} />
+            <Heading special={true}>
+              <img src={logo} alt={`${title} ${subTitle}`} />
+              <h1>
+                <small>{preTitle}</small>
+                {title}
+                <span>{subTitle}</span>
+              </h1>
+            </Heading>
             <Bodytext html={homeHTML} />
           </Article>
         )}
@@ -57,6 +69,7 @@ const IndexPage = props => {
         language={siteLanguage}
         title={siteTitle}
         description={siteDescription}
+        image={siteImage}
       />
     </React.Fragment>
   );
@@ -70,6 +83,8 @@ export const query = graphql`
       html
       frontmatter {
         title
+        preTitle
+        subTitle
       }
     }
     footerLinks: markdownRemark(
