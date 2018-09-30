@@ -3,13 +3,13 @@ import { graphql } from 'gatsby';
 import { css } from 'emotion';
 
 //import '@react-website-themes/job-interview/styles/variables';
-import '../../../../mynpms/react-website-themes/packages/job-interview/src/styles/variables';
-import '../../../../mynpms/react-website-themes/packages/job-interview/src//styles/global';
+import '@react-website-themes/job-interview/styles/variables';
+import '@react-website-themes/job-interview//styles/global';
 
-import Screens from '../../../../mynpms/react-website-themes/packages/job-interview/src/components/Screens';
-import Screen from '../../../../mynpms/react-website-themes/packages/job-interview/src/components/Screen';
-import Nav from '../../../../mynpms/react-website-themes/packages/job-interview/src/components/Nav';
-import Seo from '../../../../mynpms/react-website-themes/packages/job-interview/src/components/Seo';
+import Screens from '@react-website-themes/job-interview/components/Screens';
+import Screen from '@react-website-themes/job-interview/components/Screen';
+import Nav from '@react-website-themes/job-interview/components/Nav';
+import Seo from '@react-website-themes/job-interview/components/Seo';
 
 import ChevronRightIcon from 'react-feather/dist/icons/chevron-right';
 import ChevronLeftIcon from 'react-feather/dist/icons/chevron-left';
