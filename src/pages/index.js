@@ -3,12 +3,16 @@ import { graphql } from 'gatsby';
 import { css } from 'emotion';
 
 //import '@react-website-themes/job-interview/styles/variables';
-import '../../../../mynpms/react-website-themes/packages/job-interview/src/styles/variables';
-import '../../../../mynpms/react-website-themes/packages/job-interview/src//styles/global';
+import '@react-website-themes/job-interview/styles/variables';
+import '@react-website-themes/job-interview//styles/global';
 
-import Screens from '../../../../mynpms/react-website-themes/packages/job-interview/src/components/Screens';
-import Screen from '../../../../mynpms/react-website-themes/packages/job-interview/src/components/Screen';
-import Seo from '../../../../mynpms/react-website-themes/packages/job-interview/src/components/Seo';
+import Screens from '@react-website-themes/job-interview/components/Screens';
+import Screen from '@react-website-themes/job-interview/components/Screen';
+import Nav from '@react-website-themes/job-interview/components/Nav';
+import Seo from '@react-website-themes/job-interview/components/Seo';
+
+import ChevronRightIcon from 'react-feather/dist/icons/chevron-right';
+import ChevronLeftIcon from 'react-feather/dist/icons/chevron-left';
 
 import avatar from '../content/images/avatar.jpg';
 
@@ -32,31 +36,44 @@ const IndexPage = props => {
   } = config;
 
   const screens = [
-    { id: 1, headline: `Hi, I'm Greg`, text: 'subtext', background: '#fff' },
+    {
+      id: 1,
+      headline: `Hi, my name is Greg.`,
+      text: `Actually, it's Grzegorz. In JavaScript we would state Grzegorz==Greg, so...  ;) I'm Polish.`,
+    },
     {
       id: 2,
       headline: `I'm a front-end developer`,
-      text: 'subtext',
-      background: '#BCE4F2',
+      text:
+        'Recently, on a daily basis I use: JavaScript (ES6), React, Gatsby, CSS (Emotion), GIT, just to name the most important bits.',
     },
     {
       id: 3,
-      headline: `I used to be an art director and web designer`,
-      text: 'subtext',
-      background: '#FCC4D9',
+      headline: `I used to be an art director...`,
+      text:
+        'I know what does the aesthetics mean and I know how important the details are.',
     },
     {
       id: 4,
-      headline: 'Thank you.',
-      text: 'subtext',
-      background: '#D69E7A',
-      avatar: avatar,
+      headline: `... and a web designer.`,
+      text: `I am still interested in web UX and I know how to talk with designers.`,
     },
+    {
+      id: 5,
+      headline: `I'm looking for a full time job`,
+      text: 'On site (Warsaw/PL or London/UK) or remote.',
+    },
+    { id: 6, headline: 'Thank you.', text: 'subtext', avatar: avatar },
   ].reverse();
 
   return (
     <>
-      <Screens screens={screens} />
+      <Screens
+        screens={screens}
+        navComponent={Nav}
+        screenComponent={Screen}
+        icons={{ next: ChevronRightIcon, prev: ChevronLeftIcon }}
+      />
       <Seo
         url={siteUrl}
         language={siteLanguage}

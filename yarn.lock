@@ -812,6 +812,13 @@
   dependencies:
     typeface-open-sans "^0.0.54"
 
+"@react-website-themes/job-interview@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@react-website-themes/job-interview/-/job-interview-0.0.2.tgz#1115de036e4a6538978d551bf5d004bfd487fe98"
+  dependencies:
+    lodash.debounce "^4.0.8"
+    typeface-open-sans "^0.0.54"
+
 "@types/configstore@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@types/configstore/-/configstore-2.1.1.tgz#cd1e8553633ad3185c3f2f239ecff5d2643e92b6"
