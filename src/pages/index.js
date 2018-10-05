@@ -1,12 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { css } from 'emotion';
 
 import '@react-website-themes/job-interview/styles/variables';
 import '@react-website-themes/job-interview/styles/global';
 
 import Screens from '@react-website-themes/job-interview/components/Screens';
-import Screen from '@react-website-themes/job-interview/components/components/Screen';
+import Screen from '@react-website-themes/job-interview/components/Screen';
 import Nav from '@react-website-themes/job-interview/components/Nav';
 import Social from '@react-website-themes/job-interview/components/Social';
 import Seo from '@react-website-themes/job-interview/components/Seo';
@@ -22,13 +21,6 @@ import avatar from '../content/images/avatar.jpg';
 import config from 'content/meta/config';
 
 const IndexPage = props => {
-  const {
-    data: {
-      footerLinks: { html: footerLinksHTML },
-      copyright: { html: copyrightHTML },
-    },
-  } = props;
-
   const { siteUrl, siteTitle, siteDescription, siteLanguage } = config;
 
   const navIcons = {
@@ -74,7 +66,7 @@ const IndexPage = props => {
     {
       id: 6,
       headline: 'Thank you.',
-      body: `You can find me at:`,
+      body: `Find me at:`,
       avatar: avatar,
     },
   ];
