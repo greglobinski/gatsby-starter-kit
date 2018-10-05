@@ -34,42 +34,28 @@ const IndexPage = props => {
     { url: 'mailto:greglobinski@gmail.com', icon: MailIcon },
   ];
 
-  const screensData = [
-    {
-      id: 1,
-      headline: `Hi, my name is Greg.`,
-      body: `Actually, it's Grzegorz. In JavaScript we would state Grzegorz==Greg, so...  ;) I'm Polish.`,
+  const {
+    data: {
+      screens: { edges },
     },
-    {
-      id: 2,
-      headline: `I'm a front-end developer.`,
-      body:
-        'Recently, on a daily basis I use: JavaScript (ES6), React, Gatsby, CSS (Emotion), GIT, just to name the most important bits.',
-    },
-    {
-      id: 3,
-      headline: `I used to be an art director...`,
-      body:
-        'I know what does the aesthetics mean and I know how important the details are.',
-    },
-    {
-      id: 4,
-      headline: `... and a web designer.`,
-      body: `I am still interested in web UX and I know the designers' language.`,
-    },
-    {
-      id: 5,
-      headline: `I'm looking for a full time job.`,
-      body:
-        'On site (Warsaw/London) or remote. If you think I could match to your team drop me a line.',
-    },
-    {
-      id: 6,
-      headline: 'Thank you.',
-      body: `Find me at:`,
-      avatar: avatar,
-    },
-  ];
+  } = props;
+
+  const screensData = edges.map(edge => {
+    const {
+      node: {
+        fields: { prefix: id },
+        html,
+      },
+    } = edge;
+
+    const screen = { id: parseInt(id, 10), html };
+
+    if (screen.id === edges.length) {
+      screen.avatar = avatar;
+    }
+
+    return screen;
+  });
 
   return (
     <React.Fragment>
@@ -95,15 +81,19 @@ export default IndexPage;
 
 export const query = graphql`
   query {
-    footerLinks: markdownRemark(
-      fileAbsolutePath: { regex: "/content/parts/footerLinks/" }
+    screens: allMarkdownRemark(
+      filter: { fields: { source: { eq: "screens" }, prefix: { ne: null } } }
+      sort: { fields: [fields___prefix], order: ASC }
     ) {
-      html
-    }
-    copyright: markdownRemark(
-      fileAbsolutePath: { regex: "/content/parts/copyright/" }
-    ) {
-      html
+      edges {
+        node {
+          fields {
+            prefix
+            source
+          }
+          html
+        }
+      }
     }
   }
 `;
