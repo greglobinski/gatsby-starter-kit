@@ -12,13 +12,10 @@ import Seo from '@react-website-themes/job-interview/components/Seo';
 
 import ChevronUpIcon from 'react-feather/dist/icons/chevron-up';
 import ChevronDownIcon from 'react-feather/dist/icons/chevron-down';
-import GithubIcon from 'react-feather/dist/icons/github';
-import TwitterIcon from 'react-feather/dist/icons/twitter';
-import MailIcon from 'react-feather/dist/icons/mail';
 
 import avatar from '../content/images/avatar.jpg';
-
 import config from 'content/meta/config';
+import socialLinks from 'content/meta/socialLinks';
 
 const IndexPage = props => {
   const { siteUrl, siteTitle, siteDescription, siteLanguage } = config;
@@ -27,12 +24,6 @@ const IndexPage = props => {
     next: ChevronDownIcon,
     prev: ChevronUpIcon,
   };
-
-  const socialLinks = [
-    { url: 'https://github.com/greglobinski', icon: GithubIcon },
-    { url: 'https://twitter.com/greglobinski', icon: TwitterIcon },
-    { url: 'mailto:greglobinski@gmail.com', icon: MailIcon },
-  ];
 
   const {
     data: {
