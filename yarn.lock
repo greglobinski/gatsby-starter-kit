@@ -806,9 +806,9 @@
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
 
-"@react-website-themes/job-interview@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@react-website-themes/job-interview/-/job-interview-0.0.3.tgz#09bd30cf8847dc5554e019570f3eb9ae3a176e08"
+"@react-website-themes/job-interview@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@react-website-themes/job-interview/-/job-interview-0.0.4.tgz#327cb8ea0d9c26a1a128ad573a41f661c77867f9"
   dependencies:
     lodash.debounce "^4.0.8"
     typeface-open-sans "^0.0.54"
