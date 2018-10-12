@@ -14,9 +14,8 @@ const Branding = props => {
 };
 
 Branding.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   subTitle: PropTypes.string,
-  logo: PropTypes.node,
 };
 
 export default Branding;

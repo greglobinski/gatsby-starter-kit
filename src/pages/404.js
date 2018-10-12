@@ -1,11 +1,15 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 
-import Layout from 'starter/Layout';
-import Article from 'starter/Article';
-import Heading from 'starter/Heading';
-import Bodytext from 'starter/Bodytext';
-import Seo from 'starter/Seo';
+import Layout from '../starter/Layout';
+import Article from '../starter/Article';
+import Heading from '../starter/Heading';
+import Bodytext from '../starter/Bodytext';
+import Header from '../starter/Header';
+import Footer from '../starter/Footer';
+
+import config from '../content/meta/config';
+import menu from '../content/meta/menu';
 
 const NotFoundPage = props => {
   const {
@@ -14,13 +18,18 @@ const NotFoundPage = props => {
     },
   } = props;
 
+  const { headerTitle, headerSubTitle } = config;
+
   return (
     <Layout>
-      <Article>
-        <Heading title="NOT FOUND" />
-        <Bodytext html={notFoundHTML} />
-      </Article>
-      <Seo />
+      <Header title={headerTitle} subTitle={headerSubTitle} menuItems={menu} />
+      <main>
+        <Article>
+          <Heading title="NOT FOUND" />
+          <Bodytext html={notFoundHTML} />
+        </Article>
+      </main>
+      <Footer />
     </Layout>
   );
 };
