@@ -16,7 +16,8 @@ const Bodytext = props => {
 };
 
 Bodytext.propTypes = {
-  html: PropTypes.string
+  html: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default Bodytext;
