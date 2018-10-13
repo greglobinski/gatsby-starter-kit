@@ -1,17 +1,23 @@
 module.exports = {
+  testRegex: '/.*(__tests__\\/.*)|(.*(test|spec))\\.jsx?$',
+  transform: {
+    '^.+\\.jsx?$': '<rootDir>/test/jest-preprocess.js',
+  },
+  moduleNameMapper: {
+    '.+\\.(css|styl|less|sass|scss)$': 'identity-obj-proxy',
+    '.+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+      '<rootDir>/test/__mocks__/fileMock.js',
+  },
+  testPathIgnorePatterns: ['node_modules', '.cache'],
+  transformIgnorePatterns: ['node_modules/(?!(gatsby)/)'],
+  globals: {
+    __PATH_PREFIX__: '',
+  },
+  testURL: 'http://localhost',
   setupFiles: [
-    '<rootDir>/test/mockWindowDocument.js',
+    '<rootDir>/test/loadershim.js',
     '<rootDir>/test/throwOnPropTypeError.js',
   ],
   coverageDirectory: './coverage/',
-  collectCoverageFrom: ['./src/**/*.js'],
-  testRegex: '(/src/{0,1}.*/__tests__/.*)\\.js?$',
-  // coverageThreshold: {
-  //   global: {
-  //     statements: 90,
-  //     branches: 80,
-  //     functions: 90,
-  //     lines: 95,
-  //   },
-  // },
+  collectCoverageFrom: ['<rootDir>/src/starter/**/*.js'],
 };
