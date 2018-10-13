@@ -1,6 +1,6 @@
 ## Gatsby Starter Kit
 
-# Minimal
+# Equipped
 
 MIT License
 
