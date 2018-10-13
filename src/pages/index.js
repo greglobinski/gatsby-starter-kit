@@ -7,6 +7,7 @@ import Bodytext from '../starter/Bodytext';
 import Heading from '../starter/Heading';
 import Header from '../starter/Header';
 import Footer from '../starter/Footer';
+import Seo from '../starter/Seo';
 
 import config from '../content/meta/config';
 import menu from '../content/meta/menu';
@@ -21,7 +22,15 @@ const IndexPage = props => {
     },
   } = props;
 
-  const { headerTitle, headerSubTitle } = config;
+  const {
+    headerTitle,
+    headerSubTitle,
+    siteUrl,
+    siteTitle,
+    siteDescription,
+    siteLanguage,
+    siteImage,
+  } = config;
 
   return (
     <Layout>
@@ -33,6 +42,13 @@ const IndexPage = props => {
         </Article>
       </main>
       <Footer />
+      <Seo
+        url={siteUrl}
+        language={siteLanguage}
+        title={siteTitle}
+        description={siteDescription}
+        image={siteImage}
+      />
     </Layout>
   );
 };
