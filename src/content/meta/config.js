@@ -20,6 +20,16 @@ const config = {
   /* url */
   siteUrl: base.url
   // pathPrefix: '',
+
+  /* manifest */
+  manifestName: `${base.name}`,
+  manifestShortName: 'GatsbyStartKit', // max 12 characters
+  manifestStartUrl: '/index.html',
+  manifestBackgroundColor: '#ffffff',
+  manifestThemeColor: '#ffffff',
+  manifestDisplay: 'standalone',
+  manifestIcon: 'src/content/images/icon.png',
+
 };
 
 module.exports = config;
