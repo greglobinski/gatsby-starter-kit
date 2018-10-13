@@ -15,7 +15,7 @@ import Menu from '@react-website-themes/default/components/Menu';
 import Seo from '@react-website-themes/default/components/Seo';
 
 import config from 'content/meta/config';
-import menuItems from 'content/meta/menu';
+import menu from 'content/meta/menu';
 
 const NotFoundPage = props => {
   const {
@@ -33,13 +33,14 @@ const NotFoundPage = props => {
     siteTitle,
     siteDescription,
     siteLanguage,
+    siteImage,
   } = config;
 
   return (
     <Layout>
       <Header>
         <Branding title={headerTitle} subTitle={headerSubTitle} />
-        <Menu items={menuItems} />
+        <Menu items={menu} />
       </Header>
       <Article>
         <Heading title="NOT FOUND" />
@@ -51,6 +52,7 @@ const NotFoundPage = props => {
         language={siteLanguage}
         title={siteTitle}
         description={siteDescription}
+        image={siteImage}
       />
     </Layout>
   );
