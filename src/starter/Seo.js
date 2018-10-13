@@ -9,7 +9,7 @@ const Seo = props => {
     title,
     description,
     type = 'website',
-    twitterCreator,
+    twitter,
     image,
   } = props;
 
@@ -30,9 +30,7 @@ const Seo = props => {
 
       {/* Twitter Card tags */}
       <meta name="twitter:card" content="summary" />
-      {twitterCreator && (
-        <meta name="twitter:creator" content={twitterCreator} />
-      )}
+      {twitter && <meta name="twitter:creator" content={twitter} />}
     </Helmet>
   );
 };
@@ -44,7 +42,7 @@ Seo.propTypes = {
   description: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   type: PropTypes.string,
-  twitterCreator: PropTypes.string,
+  twitter: PropTypes.string,
 };
 
 export default Seo;
