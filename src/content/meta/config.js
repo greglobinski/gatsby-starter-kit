@@ -1,6 +1,6 @@
 const base = {
   name: 'Gatsby Starter Kit',
-  url: 'https://github.com/greglobinski/gatsby-starter-kit',
+  url: 'https://github.com/greglobinski/gatsby-starter-kit'
 };
 
 const config = {
@@ -29,6 +29,9 @@ const config = {
   manifestThemeColor: '#ffffff',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/content/images/icon.png',
+
+  /* Twitter */
+  twitter: '' // used as content of the 'twitter:creator' meta tag
 };
 
 module.exports = config;
