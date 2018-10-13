@@ -1,0 +1,53 @@
+{
+  "name": "gatsby-starter-kit",
+  "description": "A set of starters for Gatsby.js v.2",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "lint": "eslint src"
+  },
+  "dependencies": {
+    "@react-website-themes/default": "^0.0.17",
+    "emotion": "^9.2.9",
+    "emotion-server": "^9.2.9",
+    "facepaint": "^1.2.1",
+    "gatsby": "2.0.0",
+    "gatsby-image": "2.0.0-beta.7",
+    "gatsby-plugin-catch-links": "2.0.2",
+    "gatsby-plugin-emotion": "2.0.5",
+    "gatsby-plugin-google-analytics": "2.0.5",
+    "gatsby-plugin-react-helmet": "3.0.0",
+    "gatsby-plugin-resolve-src": "2.0.0-beta.1",
+    "gatsby-plugin-sharp": "2.0.5",
+    "gatsby-plugin-sitemap": "2.0.1",
+    "gatsby-source-filesystem": "2.0.1",
+    "gatsby-transformer-remark": "2.1.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-emotion": "^9.2.9",
+    "react-feather": "^1.1.1",
+    "react-helmet": "^5.2.0"
+  },
+  "devDependencies": {
+    "@babel/preset-flow": "^7.0.0-rc.1",
+    "babel-eslint": "7.2.3",
+    "dotenv": "^6.0.0",
+    "eslint": "4.1.1",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "2.34.1",
+    "eslint-plugin-import": "2.6.0",
+    "eslint-plugin-jest": "^21.18.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "7.1.0",
+    "jest": "^23.6.0",
+    "js-yaml": "^3.12.0",
+    "prettier": "^1.13.7",
+    "react-testing-library": "^5.0.1",
+    "yaml-loader": "^0.5.0"
+  }
+}
