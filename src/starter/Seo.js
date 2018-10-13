@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import config from 'content/meta/config';
+import config from '../content/meta/config';
 
 const Seo = props => {
   const {

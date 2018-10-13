@@ -4,9 +4,6 @@ import PropTypes from 'prop-types';
 import Branding from './Branding';
 import MainMenu from './MainMenu';
 
-import config from 'content/meta/config';
-import menu from 'content/meta/menu';
-
 const Header = props => {
   const { title, subTitle = '', menuItems } = props;
 
