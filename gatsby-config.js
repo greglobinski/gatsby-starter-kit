@@ -23,5 +23,17 @@ module.exports = {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: config.manifestName,
+        short_name: config.manifestShortName,
+        start_url: config.manifestStartUrl,
+        background_color: config.manifestBackgroundColor,
+        theme_color: config.manifestThemeColor,
+        display: config.manifestDisplay,
+        icon: config.manifestIcon,
+      },
+    },
   ],
 };
