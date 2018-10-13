@@ -1,6 +1,6 @@
 const base = {
   name: 'Gatsby Starter Kit',
-  url: 'https://github.com/greglobinski/gatsby-starter-kit'
+  url: 'https://github.com/greglobinski/gatsby-starter-kit',
 };
 
 const config = {
@@ -23,7 +23,7 @@ const config = {
 
   /* manifest */
   manifestName: `${base.name}`,
-  manifestShortName: 'GatsbyStartKit', // max 12 characters
+  manifestShortName: 'GatsbyKit', // max 12 characters
   manifestStartUrl: '/index.html',
   manifestBackgroundColor: '#ffffff',
   manifestThemeColor: '#ffffff',
@@ -31,7 +31,7 @@ const config = {
   manifestIcon: 'src/content/images/icon.png',
 
   /* Twitter */
-  twitter: '' // used as content of the 'twitter:creator' meta tag
+  twitter: '', // used as content of the 'twitter:creator' meta tag
 };
 
 module.exports = config;
