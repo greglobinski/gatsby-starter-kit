@@ -1,6 +1,6 @@
 const base = {
   name: 'Gatsby Starter Kit',
-  url: 'https://github.com/greglobinski/gatsby-starter-kit'
+  url: 'https://github.com/greglobinski/gatsby-starter-kit',
 };
 
 const config = {
@@ -18,7 +18,7 @@ const config = {
   headerSubTitle: 'a set of starters for Gatsby.js',
 
   /* url */
-  siteUrl: base.url
+  siteUrl: base.url,
   // pathPrefix: '',
 
   /* manifest */
@@ -29,7 +29,6 @@ const config = {
   manifestThemeColor: '#ffffff',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/content/images/icon.png',
-
 };
 
 module.exports = config;
