@@ -35,5 +35,6 @@ module.exports = {
         icon: config.manifestIcon,
       },
     },
+    `gatsby-plugin-offline`,
   ],
 };
