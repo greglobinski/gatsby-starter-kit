@@ -16,8 +16,8 @@ import Layout from '@react-website-themes/default/components/Layout';
 import Menu from '@react-website-themes/default/components/Menu';
 import Seo from '@react-website-themes/default/components/Seo';
 
-import config from 'content/meta/config';
-import menuItems from 'content/meta/menu';
+import config from '../content/meta/config';
+import menu from '../content/meta/menu';
 
 const PageTemplate = props => {
   const {
@@ -40,13 +40,14 @@ const PageTemplate = props => {
     siteTitle,
     siteLanguage,
     siteTitlePostfix,
+    siteImage,
   } = config;
 
   return (
     <Layout>
       <Header>
         <Branding title={headerTitle} subTitle={headerSubTitle} />
-        <Menu items={menuItems} />
+        <Menu items={menu} />
       </Header>
       <Article>
         <Heading title={title} />
@@ -58,6 +59,7 @@ const PageTemplate = props => {
         language={siteLanguage}
         title={`${title}${siteTitlePostfix}`}
         description={excerpt}
+        image={siteImage}
       />
     </Layout>
   );

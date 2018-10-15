@@ -23,8 +23,8 @@ import NextPrev from '@react-website-themes/default/components/NextPrev';
 import Seo from '@react-website-themes/default/components/Seo';
 import Share from '@react-website-themes/default/components/Share';
 
-import config from 'content/meta/config';
-import menuItems from 'content/meta/menu';
+import config from '../content/meta/config';
+import menuItems from '../content/meta/menu';
 
 import CalendarIcon from 'react-feather/dist/icons/calendar';
 import UserIcon from 'react-feather/dist/icons/user';
