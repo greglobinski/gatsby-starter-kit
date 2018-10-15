@@ -52,10 +52,7 @@ const NotFoundPage = props => {
         language={siteLanguage}
         title={siteTitle}
         description={siteDescription}
-<<<<<<< HEAD
-=======
         image={siteImage}
->>>>>>> code/themed
       />
     </Layout>
   );

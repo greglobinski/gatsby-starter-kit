@@ -16,8 +16,8 @@ import Layout from '@react-website-themes/default/components/Layout';
 import Menu from '@react-website-themes/default/components/Menu';
 import Seo from '@react-website-themes/default/components/Seo';
 
-import config from 'content/meta/config';
-import menuItems from 'content/meta/menu';
+import config from '../content/meta/config';
+import menuItems from '../content/meta/menu';
 
 const PageTemplate = props => {
   const {
