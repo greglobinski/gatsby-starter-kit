@@ -22,7 +22,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
-    `gatsby-plugin-resolve-src`,
     `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-transformer-remark`,
@@ -62,13 +61,28 @@ module.exports = {
         ],
       },
     },
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: process.env.GOOGLE_ANALYTICS_ID,
       },
     },
-    `gatsby-plugin-emotion`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: config.manifestName,
+        short_name: config.manifestShortName,
+        start_url: config.manifestStartUrl,
+        background_color: config.manifestBackgroundColor,
+        theme_color: config.manifestThemeColor,
+        display: config.manifestDisplay,
+        icon: config.manifestIcon,
+      },
+    },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-sitemap`,
+
+    `gatsby-plugin-emotion`,
   ],
 };

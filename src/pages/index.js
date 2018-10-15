@@ -12,14 +12,14 @@ import Layout from '@react-website-themes/default/components/Layout';
 import Menu from '@react-website-themes/default/components/Menu';
 import Seo from '@react-website-themes/default/components/Seo';
 
-import config from 'content/meta/config';
-import menuItems from 'content/meta/menu';
+import config from '../content/meta/config';
+import menu from '../content/meta/menu';
 
 const IndexPage = props => {
   const {
     data: {
-      footerLinks: { html: footerLinksHTML },
       hero: { html: heroHTML },
+      footerLinks: { html: footerLinksHTML },
       copyright: { html: copyrightHTML },
     },
   } = props;
@@ -31,13 +31,14 @@ const IndexPage = props => {
     siteTitle,
     siteDescription,
     siteLanguage,
+    siteImage,
   } = config;
 
   return (
     <Layout>
       <Header>
         <Branding title={headerTitle} subTitle={headerSubTitle} />
-        <Menu items={menuItems} />
+        <Menu items={menu} />
       </Header>
       <Hero html={heroHTML} />
       <Footer links={footerLinksHTML} copyright={copyrightHTML} />
@@ -46,6 +47,7 @@ const IndexPage = props => {
         language={siteLanguage}
         title={siteTitle}
         description={siteDescription}
+        image={siteImage}
       />
     </Layout>
   );
